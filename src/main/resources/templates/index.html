@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="/header::header"></div>
+        <body>
+        <section class="top-header home-header with-bottom-effect transparent-effect dark">
+            <div class="bottom-effect"></div>
+            <div class="header-container">	
+                <div class="wrap-section-slider" id="topSlider">
+                    <div class="sp-slides" >
+                        <div class="slide-item sp-slide" th:each="slide:${slides}">
+                            <div class="slide-image">
+                                <img th:src="${slide.imgUrl}"  alt="" />
+                            </div>
+                            <div class="slide-content ">
+                                <p class="top-title sp-layer"  data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="100" > <th:block th:text="${slide.title}"/></p>
+                                <div class="title sp-layer" data-show-transition="right" data-hide-transition="up" data-show-delay="500" data-hide-delay="150"> <th:block th:text="${slide.firstP}"/></div>
+                                <div class="under-title sp-layer" data-show-transition="up" data-hide-transition="up" data-show-delay="600" data-hide-delay="200"> <th:block th:text="${slide.secondP}"/></div>
+                                <div class="controls sp-layer" data-show-transition="up" data-hide-transition="up" data-show-delay="800" data-hide-delay="250">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--./container-->
+        </section>  
+
+
+        <!-- ========================== -->
+        <!-- HOME - FEATURES -->
+        <!-- ========================== -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-heading " >
+                    <div class="section-title">我们的优势</div>
+                    <div class="section-subtitle">做最好的婚纱摄影</div>
+                    <div class="design-arrow"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                        <article>
+                            <div class="feature-item ">
+                                <div class="wrap-feature-icon">
+                                    <div class="feature-icon">
+                                        <span class="icon icon-Carioca"></span>
+                                    </div>
+                                </div>
+                                <div class="title">优势一</div>
+                                <div class="text">
+                                    有钱人终成眷属<br>
+                                    没钱人亲眼目睹<br>
+                                </div>
+                            </div>
+                        </article>
+                    </div> 
+                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                        <article>
+                            <div class="feature-item active">
+                                <div class="wrap-feature-icon">
+                                    <div class="feature-icon">
+                                        <span class="icon icon-Heart"></span>
+                                    </div>
+                                </div>
+                                <div class="title">优势一</div>
+                                <div class="text">
+                                    有钱人终成眷属<br>
+                                    没钱人亲眼目睹<br>
+                                </div>
+                            </div>
+                        </article>
+                    </div> 
+                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                        <article>
+                            <div class="feature-item">
+                                <div class="wrap-feature-icon">
+                                    <div class="feature-icon">
+                                        <span class="icon  icon-Tools"></span>
+                                    </div>
+                                </div>
+                                <div class="title">优势一</div>
+                                <div class="text">
+                                   有钱人终成眷属<br>
+                                    没钱人亲眼目睹<br>
+                                </div>
+                            </div>
+                        </article>
+                    </div> 
+                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                        <article>
+                            <div class="feature-item">
+                                <div class="wrap-feature-icon">
+                                    <div class="feature-icon">
+                                        <span class="icon icon-Blog"></span>
+                                    </div>
+                                </div>
+                                <div class="title">优势一</div>
+                                <div class="text">
+                                    有钱人终成眷属<br>
+                                    没钱人亲眼目睹<br>
+                                </div>
+                            </div>
+                        </article>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================== -->
+        <!-- HOME - ACHIEVEMENTS -->
+        <!-- ========================== -->
+        <section class="achievements-section with-bottom-effect dark dark-strong">
+            <div class="bottom-effect"></div>
+            <div class="container dark-content">
+                <div class="row list-achieve">
+                    <div class="col-md-3 col-sm-3 col-xs-6 wow zoomIn" data-wow-delay="0.5s">
+                        <article>
+                            <div class="achieve-item">
+                                <div class="achieve-icon">
+                                    <span class="icon icon-Wallet"></span>
+                                </div>
+                                <div class="count">561</div>
+                                <div class="name">总订单</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 wow zoomIn" data-wow-delay="1.5s">
+                        <article>
+                            <div class="achieve-item">
+                                <div class="achieve-icon">
+                                    <span class="icon icon-Cup"></span>
+                                </div>
+                                <div class="count">24</div>
+                                <div class="name">获得奖项</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 wow zoomIn" data-wow-delay="2.5s">
+                        <article>
+                            <div class="achieve-item">
+                                <div class="achieve-icon">
+                                    <span class="icon icon-Like"></span>
+                                </div>
+                                <div class="count">160</div>
+                                <div class="name">满意客户</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 wow zoomIn" data-wow-delay="3.5s">
+                        <article>
+                            <div class="achieve-item">
+                                <div class="achieve-icon">
+                                    <span class="icon icon-Users"></span>
+                                </div>
+                                <div class="count">285</div>
+                                <div class="name">员工人数</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================== -->
+        <!-- HOME - LATEST WORKS -->
+        <!-- ========================== -->
+        <section class="latest-works-section clearfix">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-title">最新作品</div>
+                    <div class="section-subtitle">我们只做最好的作品</div>
+                    <div class="design-arrow"></div>
+                </div>
+            </div>
+
+            <div class="scroll-pane ">
+                <div class="scroll-content" >
+
+                    <div class="scroll-content-item  " th:each="list:${pdShowList}">
+                        <a th:href="@{${list.imgUrl}}" class="fancybox">
+                            <img th:src="${list.imgUrl}" alt="" />
+                        </a>
+                        <div class="name" ><th:block th:text="${list.imgTitle}"></th:block></div>
+                    </div>
+
+                </div>
+                <div class="scroll-bar-wrap ">
+                    <div class="scroll-bar"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+            <div th:replace="/footer::footer"></div>
+    </body>
+</html>
+

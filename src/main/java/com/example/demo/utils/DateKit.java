@@ -1,0 +1,29 @@
+package com.example.demo.utils;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateKit {
+    public static String dateFormat(Date date, String dateFormat) {
+        if(date != null) {
+            SimpleDateFormat format = new SimpleDateFormat(dateFormat);
+            if(date != null) {
+                return format.format(date);
+            }
+        }
+
+        return "";
+    }
+
+    public static int getCurrentUnixTime() {
+        return getUnixTimeByDate(new Date());
+    }
+
+    public static int getUnixTimeByDate(Date date) {
+        return (int)(date.getTime() / 1000L);
+    }
+
+    public static String formatDateByUnixTime(Integer unixTime, String dateFormat) {
+        return dateFormat(new Date(unixTime * 1000L), dateFormat);
+    }
+}

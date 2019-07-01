@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hunsha?serverTimezone=UTC&useSSL=false
+    password: 123456
+server:
+  port: 8083
+thymeleaf:
+  template-loader-path: classpath:/templates/
+  suffix: .html
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.demo.entity
+multipart:
+  enabled: true
+  #location: roy-upload-tmp
+  max-file-size: 100MB
+  max-request-size: 100MB
+

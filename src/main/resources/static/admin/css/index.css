@@ -1,0 +1,35 @@
+#bigPic {
+    position: absolute;
+    z-index: 9999;
+    width: 750px;
+    height: 570px;
+    background-color: white;
+    margin: auto;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#slide_form{
+    width: 750px;
+    height: 570px;
+    background-color: white;
+    margin: auto;
+    position: fixed;
+    z-index: 3;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.img-rounded{
+    width: 50px;
+    height:50px;
+}
+.img-thumbnail{
+    width: 100px;
+    height:100px;
+}

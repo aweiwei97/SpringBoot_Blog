@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="/header::header"></div>
+<body>
+
+        <section class="top-header countact-us-header with-bottom-effect transparent-effect dark dark-strong">
+            <div class="bottom-effect"></div>
+            <div class="header-container">	
+                <div class="header-title">
+                    <div class="header-icon"><span class="icon icon-Wheelbarrow"></span></div>
+                    <div class="title">联系我们</div>
+                    <em>######</em>
+                </div>
+            </div><!--container-->
+        </section>  
+
+        <section class="countact-us-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="contact-form">
+                            <div class="form-heading">
+                                <h3>发送留言</h3>
+                            </div>
+                            <form method="post" name="contact-form" id="contact-form">
+                                <div id="response"></div>
+                                <div class="row"> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name"  placeholder="称呼" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="num" id="num" placeholder="手机号码" class="form-control" />
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="content" id="content" placeholder="留言内容"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <button type="button" id="sendSubmit" onclick="subContent()" class="btn btn-success btn-sm waves-effect waves-light m-b-7"value="发送">发送</button>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-6">
+                                <div class="contact-map" >
+                                    <div id="contactMap"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-6">
+                                <div class="contact-block">
+                                    <h5>keep in touch</h5>
+                                    <div class="row ">
+                                        <div class="col-md-12 clearfix">
+                                            <div class="type-info pull-left">
+                                                <i class="icon icon-House"></i>
+                                                address
+                                            </div>
+                                            <div class="info pull-right text-right">
+                                                <p class="no-margin">68 Landsriver Street, California 22066</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 clearfix">
+                                            <div class="type-info pull-left">
+                                                <i class="icon icon-Phone2"></i>
+                                                phone
+                                            </div>
+                                            <div class="info pull-right text-right">
+                                                <p class="no-margin">+201 126 216 88     +201 126 216 88</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 clearfix">
+                                            <div class="type-info pull-left">
+                                                <i class="icon icon-Mail"></i>
+                                                email
+                                            </div>
+                                            <div class="info pull-right text-right">
+                                                <p class="no-margin">support@oscend.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 clearfix">
+                                            <div class="type-info pull-left">
+                                                <i class="icon icon-Mouse"></i>
+                                                Skype Chat
+                                            </div>
+                                            <div class="info pull-right text-right">
+                                                <p class="no-margin">oscend.live</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:replace="/footer::footer"></div>
+        <script  th:inline="javascript" >
+            var tale = new $.tale();
+          function  subContent(){
+         var name=$("#name").val();
+         var num=$("#num").val();
+         var content=$("#content").val()
+              console.log(name);
+              $.ajax({
+                  type: 'post',
+                  url: '/contact',
+                  data: {name:name,num:num,content:content},
+                  async: false,
+                  dataType: 'json',
+                  success: function (result) {
+                      if (result && result.success) {
+                          console.log("121");
+                          tale.alertOkAndReload('留言成功');
+                      } else {
+                          if (result.msg) {
+                              tale.alertOkAndReload(result.msg);
+                          }
+                      }
+                  }
+              });
+          }
+
+            </script>
+
+
+</body>
+</html>
+
