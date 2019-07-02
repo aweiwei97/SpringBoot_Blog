@@ -13,6 +13,10 @@ import java.net.URLEncoder;
 public class Commoms {
     @Resource
     private ArticleServiceImp articleServiceImp;
+    static String pre="user/";
+
+
+
     /**
      * 返回文章链接地址
      *
@@ -20,7 +24,7 @@ public class Commoms {
      * @return
      */
     public static String permalink(article a) {
-
+        System.out.println("进来permalink");
         return permalink(a.getCid());
     }
 
@@ -96,4 +100,12 @@ public class Commoms {
         }
         return show_categories("默认分类");
     }
+
+    /**
+     * 前缀
+     */
+    public  String pre(){
+        return pre;
+    }
+
 }

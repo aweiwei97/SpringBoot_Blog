@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:yh="http://www.thymeleaf.org">
-<div th:replace="/header::header"></div>
+<div th:replace="/user/header::header"></div>
 <body>
 <div class="backgroundPost">
 <article class="main-content post-page" itemscope="" itemtype="http://schema.org/Article">
@@ -18,10 +18,10 @@
         <th:block th:utext="${article.content}"/>
     </div>
 
-    <hr  />
+    <hr/>
 
 </article>
 </div>
-<div th:replace="/footer::footer"></div>
+<div th:replace="/user/footer::footer"></div>
 </body>
 </html>

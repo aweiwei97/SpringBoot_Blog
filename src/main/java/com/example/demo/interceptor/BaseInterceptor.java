@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Component
 public class BaseInterceptor implements HandlerInterceptor {
+
     @Resource
     private Commoms commons;
 
@@ -31,8 +32,10 @@ public class BaseInterceptor implements HandlerInterceptor {
          *
          * request.getServletPath() 返回除去host和工程名部分的路径
          */
+       String uri= request.getRequestURI();
+       admin a= (admin)request.getSession().getAttribute("admin");
 
-       if(request.getSession().getAttribute("admin")==null){
+        if(uri.startsWith("/admin")&&!uri.startsWith("/admin/login")&&a==null){
            response.sendRedirect(request.getContextPath() + "/admin/login");
            return false;
        }
@@ -43,9 +46,9 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     //在业务处理器处理请求执行完成后，生成视图之前执行。后处理（调用了Service并返回ModelAndView，但未进行页面渲染），有机会修改ModelAndView
     @Override
-    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        httpServletRequest.setAttribute("commons", commons);//一些工具类和公共方法
-        httpServletRequest.setAttribute("adminCommons", adminCommons);//一些工具类和公共方法
+    public void postHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+        request.setAttribute("commons", commons);//一些工具类和公共方法
+        request.setAttribute("adminCommons", adminCommons);//一些工具类和公共方法
 
     }
 

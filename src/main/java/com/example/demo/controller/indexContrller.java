@@ -8,6 +8,7 @@ import com.example.demo.service.ArticleServiceImp;
 import com.example.demo.service.ContactServiceImp;
 import com.example.demo.service.PdShowServiceImp;
 import com.example.demo.service.SlideServiceImp;
+import com.example.demo.utils.Commoms;
 import com.example.demo.utils.DateKit;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
+
 public class indexContrller {
     @Resource
     private SlideServiceImp slideServiceDao;
@@ -34,6 +36,8 @@ public class indexContrller {
     @Resource
     private ArticleServiceImp articleServiceDao;
 
+    @Resource
+    private Commoms commoms;
     @RequestMapping(value = {"/","/home"})
     public String topage(HttpServletRequest request){
         slideExample slideExample=new slideExample();
@@ -42,11 +46,11 @@ public class indexContrller {
         List<pdShow> pdShowList=pdShowServiceDao.selectByExample(pdShowExample);
         request.setAttribute("slides",slides);
         request.setAttribute("pdShowList",pdShowList);
-        return "index";
+        return commoms.pre()+"index";
     }
     @RequestMapping("/topage")
     public String toPage(String url){
-        return url;
+        return  commoms.pre()+url;
     }
 
     /**
@@ -83,7 +87,7 @@ public class indexContrller {
         example.setOrderByClause("created desc");
         List<article> list=articleServiceDao.selectByExampleWithBLOBs(example);
         request.setAttribute("articles",list);
-        return "news";
+        return  commoms.pre()+"news";
 }
 
     /**
@@ -101,6 +105,6 @@ public class indexContrller {
         }
         request.setAttribute("article", a);
         request.setAttribute("is_post", true);
-        return "post";
+        return  commoms.pre()+"post";
     }
 }
