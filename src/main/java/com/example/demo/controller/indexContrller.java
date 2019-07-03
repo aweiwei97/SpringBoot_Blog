@@ -4,10 +4,7 @@ import com.example.demo.Ao.RestResponseBo;
 import com.example.demo.dto.ErrorCode;
 import com.example.demo.entity.*;
 import com.example.demo.exception.TipException;
-import com.example.demo.service.ArticleServiceImp;
-import com.example.demo.service.ContactServiceImp;
-import com.example.demo.service.PdShowServiceImp;
-import com.example.demo.service.SlideServiceImp;
+import com.example.demo.service.*;
 import com.example.demo.utils.Commoms;
 import com.example.demo.utils.DateKit;
 import org.apache.commons.lang3.StringUtils;
@@ -36,14 +33,19 @@ public class indexContrller {
     @Resource
     private ArticleServiceImp articleServiceDao;
 
+
+
     @Resource
     private Commoms commoms;
+
     @RequestMapping(value = {"/","/home"})
     public String topage(HttpServletRequest request){
         slideExample slideExample=new slideExample();
         List<slide> slides=slideServiceDao.findAll(slideExample);
         pdShowExample pdShowExample=new pdShowExample();
         List<pdShow> pdShowList=pdShowServiceDao.selectByExample(pdShowExample);
+//        webInfo web=webServiceImp.selectByPrimaryKey(1);
+//        request.getSession().setAttribute("webInfo",web);
         request.setAttribute("slides",slides);
         request.setAttribute("pdShowList",pdShowList);
         return commoms.pre()+"index";

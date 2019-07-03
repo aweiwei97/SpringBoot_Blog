@@ -12,7 +12,8 @@ import java.util.List;
 public class AdminServiceImp {
     @Resource
     private adminMapper adminMapperDao;
-    public admin Login(String name,String paw) {
+
+    public admin Login(String name, String paw) {
         adminExample example = new adminExample();
         example.createCriteria().andNameEqualTo(name).andPasswordEqualTo(paw);
         List<admin> adminList = adminMapperDao.selectByExample(example);

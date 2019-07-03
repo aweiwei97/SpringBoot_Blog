@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/admin")
@@ -42,7 +41,7 @@ private AdminServiceImp adminServiceImp;
        if (a==null){
            return RestResponseBo.fail("密码错误");
        }
-        System.out.println("???????????????");
+
        request.getSession().setAttribute("admin",a);
         return RestResponseBo.ok();
     }

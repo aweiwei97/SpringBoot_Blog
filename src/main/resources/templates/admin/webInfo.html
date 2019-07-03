@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='网站管理',active='web'">
+<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<link th:href="@{/admin/plugins/tagsinput/jquery.tagsinput.css}" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/select2.dist.css/select2-bootstrap.css}" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/toggles/toggles.css}" rel="stylesheet"/>
+
+<link href="//cdn.bootcss.com/multi-select/0.9.12/css/multi-select.css" rel="stylesheet"/>
+<link href="//cdn.bootcss.com/select2/3.4.8/select2.min.css" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/md/css/style.css}" rel="stylesheet"/>
+<style>
+    #tags_tagsinput {
+        background-color: #fafafa;
+        border: 1px solid #eeeeee;
+    }
+
+    #tags_addTag input {
+        width: 100%;
+    }
+
+    #tags_addTag {
+        margin-top: -5px;
+    }
+</style>
+<body class="fixed-left">
+<div id="wrapper">
+    <div th:replace="admin/header::header-body"></div>
+    <div class="content-page">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title">
+                            <th:block>
+                                网站信息设置
+                            </th:block>
+                        </h4>
+                    </div>
+                    <div class="col-md-12">
+                        <form id="articleForm" role="form" novalidate="novalidate">
+                            <input type="hidden" name="id" th:value="${webInfo!=null and webInfo.id!=null}?${webInfo.id}: ''" id="wid"/>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                              <div class="col-md-1"><h5>网站名称：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站名称（必须）" name="webname" required="required"
+                                       aria-required="true" th:value="${webInfo!=null and webInfo.webname!=null }?${webInfo.webname}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>网站域名：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站域名（必须）" name="weburl" required="required"
+                                                             aria-required="true" th:value="${webInfo!=null and webInfo.weburl!=null }?${webInfo.weburl}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>网站关键字：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站关键字（必须）" name="keyword" required="required"
+                                                             aria-required="true" th:value="${webInfo!=null and webInfo.keyword!=null }?${webInfo.keyword}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>网站描述：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站描述" name="webdes" required="required"
+                                                             aria-required="true" th:value="${webInfo!=null and webInfo.webdes!=null }?${webInfo.webdes}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>备案信息：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="粤ICP备123XXX号" name="fileinfo" required="required"
+                                                             aria-required="true" th:value="${webInfo!=null and webInfo.fileinfo!=null }?${webInfo.fileinfo}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>版权信息：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="2015 www.guhai.net  版权所有" name="copyright" required="required"
+                                                             aria-required="true" th:value="${webInfo!=null and webInfo.copyright!=null }?${webInfo.copyright}: ''"/>
+                                </div>
+                            </div>
+
+
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary waves-effect waves-light" onclick="subWebInfo();">
+                                    提交
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div th:replace="admin/footer :: footer-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="admin/footer :: footer"></div>
+
+
+<script type="text/javascript">
+
+
+    var tale = new $.tale();
+    /**
+     * 保存文章
+     * @param status
+     */
+    function subWebInfo() {
+        //val() 方法返回或设置被选元素的 value 属性。
+        var webname = $('#articleForm input[name=webname]').val();
+        var weburl = $('#articleForm input[name=weburl]').val();
+        var fileinfo = $('#articleForm input[name=fileinfo]').val();
+        var copyright = $('#articleForm input[name=copyright]').val();
+        var keyword = $('#articleForm input[name=keyword]').val();
+
+
+        if (webname == '') {
+            tale.alertWarn('请输入网站名称');
+            return;
+        }
+        if (weburl == '') {
+            tale.alertWarn('请输入域名');
+            return;
+        }
+        if (fileinfo == '') {
+            tale.alertWarn('请输入备案信息');
+            return;
+        }
+        if (copyright == '') {
+            tale.alertWarn('请输入版权信息');
+            return;
+        }
+
+
+        var params = $("#articleForm").serialize();
+        var url = '/admin/webInfo/update';
+        tale.post({
+            url:url,
+            data:params,
+            success: function (result) {
+                if (result && result.success) {
+                    tale.alertOk({
+                        text:'保存成功',
+                        then: function () {
+                            setTimeout(function () {
+                                window.location.href = '/admin/webInfo/';
+                            }, 500);
+                        }
+                    });
+                } else {
+                    tale.alertError(result.msg || '保存失败');
+                }
+            }
+        });
+    }
+</script>
+
+<script th:src="@{/admin/plugins/tagsinput/jquery.tagsinput.min.js}"></script>
+<script th:src="@{/admin/plugins/jquery-multi-select/jquery.quicksearch.js}"></script>
+
+<script th:src="@{//cdn.bootcss.com/multi-select/0.9.12/js/jquery.multi-select.min.js}"></script>
+<script th:src="@{//cdn.bootcss.com/select2/3.4.8/select2.min.js}"></script>
+<script th:src="@{//cdn.bootcss.com/jquery-toggles/2.0.4/toggles.min.js}"></script>
+<script th:src="@{/admin/js/article.js}"></script>
+
+
+</body>
+</html>

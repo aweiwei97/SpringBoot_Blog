@@ -2,19 +2,25 @@ package com.example.demo.utils;
 
 import com.example.demo.constant.WebConst;
 import com.example.demo.entity.article;
+import com.example.demo.entity.webInfo;
 import com.example.demo.service.ArticleServiceImp;
+import com.example.demo.service.WebServiceImp;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 @Component
 public class Commoms {
     @Resource
     private ArticleServiceImp articleServiceImp;
-    static String pre="user/";
 
+    @Resource
+    private WebServiceImp webServiceImp;
+
+    static String pre="user/";
 
 
     /**
@@ -24,7 +30,6 @@ public class Commoms {
      * @return
      */
     public static String permalink(article a) {
-        System.out.println("进来permalink");
         return permalink(a.getCid());
     }
 

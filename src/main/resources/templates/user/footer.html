@@ -63,7 +63,8 @@
     </section>
 
     <section class="copyright-section">
-        <p>Copyright &copy; 2019.Company name All rights reserved.</p>
+        <p th:text="${session.webInfo.copyright}"></p>
+        <p th:text="${session.webInfo.fileinfo}"></p>
     </section>
 </footer>
 

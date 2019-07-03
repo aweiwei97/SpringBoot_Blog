@@ -29,8 +29,8 @@
 }
 .post-list-item{
     float: left;
-    width:33.3333%;
-    height: auto;
+    width:25%;
+    height:auto;
     padding: 15px;
     align-items: center;
 }
@@ -48,7 +48,7 @@
 .post-list-item-container .item-thumb {
     position: relative;
     display: inherit;
-    min-height: 250px;
+    min-height: 150px;
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -62,7 +62,6 @@ a {
 }
 .post-list-item-container .item-label {
     position: relative;
-    height: 130px;
     padding: 15px 20px 15px;
     background-color: #fff;
 }

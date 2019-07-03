@@ -36,18 +36,37 @@ public class articleController {
         example.setOrderByClause("created desc");
         example.createCriteria().andTypeEqualTo("post");
         List<article> articles=articleServiceDao.selectByExampleWithBLOBs(example);
-        dirExample example2=new dirExample();
-        List<dir> categories = categoryServiceImp.getMetaList(example2);
-        request.setAttribute("categories", categories);
+
         request.setAttribute("articles", articles);
         return "admin/article_list";
     }
 
 
-
+    /**
+     * 文章编辑
+     * @param cid
+     * @param request
+     * @return
+     */
+    @GetMapping(value = "/{cid}")
+    public String editArticle(@PathVariable String cid, HttpServletRequest request) {
+        articleExample example = new articleExample();
+        example.createCriteria().andCidEqualTo(Integer.valueOf(cid));
+        List<article> articles=articleServiceDao.selectByExampleWithBLOBs(example);
+        request.setAttribute("contents", articles.get(0));
+        System.out.println(articles.get(0).getContent());
+        dirExample example2=new dirExample();
+        List<dir> categories = categoryServiceImp.getMetaList(example2);
+        request.setAttribute("categories", categories);
+        request.setAttribute("active", "article");
+        return "admin/article_edit";
+    }
 
     @GetMapping("/publish")
-    public String newArticle(){
+    public String newArticle(HttpServletRequest request){
+        dirExample example2=new dirExample();
+        List<dir> categories = categoryServiceImp.getMetaList(example2);
+        request.setAttribute("categories", categories);
         return "/admin/article_edit";
     }
 
