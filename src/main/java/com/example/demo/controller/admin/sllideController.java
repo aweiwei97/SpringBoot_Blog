@@ -4,7 +4,9 @@ import com.example.demo.Ao.RestResponseBo;
 
 import com.example.demo.entity.slide;
 import com.example.demo.entity.slideExample;
+import com.example.demo.service.LogServiceImp;
 import com.example.demo.service.SlideServiceImp;
+import com.example.demo.utils.Types;
 import com.example.demo.utils.commUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +29,9 @@ import java.util.List;
 public class sllideController {
     @Resource
     private SlideServiceImp slideServiceImp;
+    @Resource
+    private LogServiceImp logServiceImp;
+
     public static final String CLASSPATH = commUtils.getUplodFilePath();
 
     /**
@@ -82,6 +87,8 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
             }
             example.createCriteria().andSlideIdEqualTo(Integer.valueOf(slide_id));
             slideServiceImp.updateByExample(s, example);
+            logServiceImp.insertLog(Types.UP_SLIDE.getType(),null,request.getRemoteAddr(),1);
+
         }else{
             //插入
             /**
@@ -104,6 +111,8 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
             }
             s = new slide(fkey, Integer.valueOf(slide_sort), title, firstP, secondP, url);
             slideServiceImp.insert(s);
+            logServiceImp.insertLog(Types.ADD_SLIDE.getType(),null,request.getRemoteAddr(),1);
+
         }
         return "redirect:";
     }
@@ -111,7 +120,7 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
     @PostMapping("/delete")
     @ResponseBody
     @Transactional
-    public RestResponseBo del(@RequestParam Integer id, @RequestParam Integer sort){
+    public RestResponseBo del(@RequestParam Integer id, @RequestParam Integer sort,HttpServletRequest request){
       slide slide=slideServiceImp.selectByPrimaryKey(id);
       if(null==slide||slide.getSlideSort()!=sort){
           return RestResponseBo.fail("不存在该轮播图");
@@ -133,6 +142,8 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
         }
         File file=new File(CLASSPATH +imgUrl);
         slideServiceImp.deleteByPrimaryKey(id);
+        logServiceImp.insertLog(Types.DE_SLIDE.getType(),null,request.getRemoteAddr(),1);
+
         return RestResponseBo.ok();
     }
 }

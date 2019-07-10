@@ -3,7 +3,7 @@
 <div th:replace="/user/header::header"></div>
 <body>
 
-
+<div class="background">
 <div class="main-content index-page clearfix">
     <div class="post-lists">
         <div class="post-lists-body">
@@ -33,10 +33,11 @@
         </div>
 
     <div class="lists-navigator clearfix">
-        <div th:replace="/comm/macros::pageNav(${articles},'←','→','page','活动')"></div>
-    </div>
+        <div th:replace="/comm/macros::pageNav(${articles},'←','→','page','招聘')"></div>
     </div>
 
+    </div>
+</div>
 </div>
 </body>
 <div th:replace="/user/footer::footer"></div>

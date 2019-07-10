@@ -1,9 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.dao.contactMapper;
-import com.example.demo.entity.contact;
-import com.example.demo.entity.contactExample;
-import com.example.demo.entity.pdShow;
+import com.example.demo.entity.*;
+import com.github.pagehelper.PageHelper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -28,5 +27,21 @@ public class ContactServiceImp  {
 
     public  int deleteByPrimaryKey(Integer conId){
         return contactDao.deleteByPrimaryKey(conId);
+    }
+
+    /**
+     * 仪表盘信息
+     * @param limit
+     * @return
+     */
+    public List<contact> recentContact(int limit){
+        if(limit<0||limit>10){
+            limit=10;
+        }
+        contactExample example=new contactExample();
+        example.setOrderByClause("con_id desc");
+        PageHelper.startPage(1,limit);
+        List<contact> contactList=contactDao.selectByExample(example);
+        return  contactList;
     }
 }

@@ -2,11 +2,16 @@ package com.example.demo.service;
 
 import com.example.demo.constant.WebConst;
 import com.example.demo.dao.articleMapper;
+import com.example.demo.dao.contactMapper;
 import com.example.demo.dao.relationshipMapper;
+import com.example.demo.dto.StatisticsBo;
 import com.example.demo.entity.*;
 import com.example.demo.exception.TipException;
 import com.example.demo.utils.DateKit;
 import com.example.demo.utils.Tools;
+import com.example.demo.utils.Types;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -23,14 +28,36 @@ public class ArticleServiceImp {
 
     @Resource
     private relationshipMapper relationMapperDao;
-    /**
-     * 查找
-     * @param example
+
+    @Resource
+    private contactMapper contactDao;
+
+       /**
+     * 分页查找
+     * @param
      * @return
      */
-   public List<article> selectByExampleWithBLOBs(articleExample example){
-        return articleDao.selectByExampleWithBLOBs(example);
+    public PageInfo<article> selectByExampleWithBLOBs(int p,String type,int limit){
+        articleExample example=new articleExample();
+        example.setOrderByClause("created desc");
+        example.createCriteria().andCategoriesEqualTo(type);
+        PageHelper.startPage(p, limit);
+        List<article> articleList=articleDao.selectByExampleWithBLOBs(example);
+        PageInfo<article> articlePageInfo=new PageInfo<>(articleList);
+        return  articlePageInfo;
     }
+
+    /**
+     * 查找
+     * @param
+     * @return
+     */
+    public   List<article> selectByExampleWithBLOBs(articleExample example){
+        example.setOrderByClause("created desc");
+        List<article> articleList=articleDao.selectByExampleWithBLOBs(example);
+        return  articleList;
+    }
+
 
     /**
      * 插入
@@ -57,7 +84,29 @@ public class ArticleServiceImp {
     //更新目录库
         dirAndRelaServiceImp.saveCategories(record.getCid(),record.getCategories());
     }
-
+    /**
+     * 插入
+     * @param record
+     */
+    public void update(article record){
+        if(null==record){
+            throw new TipException("文章对象不能为空");
+        }
+        int titleLength=record.getTitle().length();
+        if(titleLength> WebConst.MAX_TITLE_COUNT){
+            throw new TipException("文章标题过长");
+        }
+        int contentTitle=record.getContent().length();
+        if(contentTitle>WebConst.MAX_TEXT_COUNT){
+            throw new TipException("文章内容过长");
+        }
+        record.setContent(EmojiParser.parseToAliases(record.getContent()));
+        int time = DateKit.getCurrentUnixTime();
+        record.setModified(time);
+        articleDao.updateByPrimaryKeyWithBLOBs(record);
+        //更新目录库
+        dirAndRelaServiceImp.saveCategories(record.getCid(),record.getCategories());
+    }
     /**
      * 获取文章
      * @param cid
@@ -106,4 +155,33 @@ public class ArticleServiceImp {
           }
         }
     }
+
+    /**
+     * 仪表盘信息
+     * @param limit
+     * @return
+     */
+    public List<article> recentArticle(int limit){
+        if(limit<0||limit>10){
+            limit=10;
+        }
+        articleExample example=new articleExample();
+        example.setOrderByClause("created desc");
+        PageHelper.startPage(1,limit);
+        List<article> articleList=articleDao.selectByExampleWithBLOBs(example);
+        return  articleList;
+    }
+
+    /**
+     * 返回文章留言数目
+     * @return
+     */
+        public StatisticsBo getStatistics(){
+        int articleCount,contactCount;
+        contactExample contactExample=new contactExample();
+        articleExample articleExample=new articleExample();
+        contactCount=contactDao.countByExample(contactExample);
+        articleCount=articleDao.countByExample(articleExample);
+        return new StatisticsBo(articleCount,contactCount);
+        }
 }

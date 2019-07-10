@@ -1,12 +1,14 @@
 package com.example.demo.controller;
 
 import com.example.demo.Ao.RestResponseBo;
+import com.example.demo.constant.WebConst;
 import com.example.demo.dto.ErrorCode;
 import com.example.demo.entity.*;
 import com.example.demo.exception.TipException;
 import com.example.demo.service.*;
 import com.example.demo.utils.Commoms;
 import com.example.demo.utils.DateKit;
+import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,7 +35,8 @@ public class indexContrller {
     @Resource
     private ArticleServiceImp articleServiceDao;
 
-
+    @Resource
+    private WebServiceImp webServiceImp;
 
     @Resource
     private Commoms commoms;
@@ -44,15 +47,15 @@ public class indexContrller {
         List<slide> slides=slideServiceDao.findAll(slideExample);
         pdShowExample pdShowExample=new pdShowExample();
         List<pdShow> pdShowList=pdShowServiceDao.selectByExample(pdShowExample);
-//        webInfo web=webServiceImp.selectByPrimaryKey(1);
-//        request.getSession().setAttribute("webInfo",web);
+      webInfo web=webServiceImp.selectByPrimaryKey(1);
+      request.getSession().setAttribute("webInfo",web);
         request.setAttribute("slides",slides);
         request.setAttribute("pdShowList",pdShowList);
         return commoms.pre()+"index";
     }
-    @RequestMapping("/topage")
-    public String toPage(String url){
-        return  commoms.pre()+url;
+    @GetMapping("/contact")
+    public String toPage(){
+        return  commoms.pre()+"contact";
     }
 
     /**
@@ -83,13 +86,36 @@ public class indexContrller {
         contactServiceDao.insert(c);
         return RestResponseBo.ok();
     }
-@RequestMapping("/news")
-    public String newsList(HttpServletRequest request){
+
+
+    @RequestMapping("/news")
+    public String news(HttpServletRequest request,@RequestParam(value = "limit", defaultValue = "8") int limit){
+        return this.newsList(request,1,"活动",limit);
+    }
+
+    @RequestMapping("/jobs")
+    public String job(HttpServletRequest request,@RequestParam(value = "limit", defaultValue = "8") int limit){
+        return this.newsList(request,1,"招聘",limit);
+    }
+
+    /**
+     * @PathVariable占位符{p}绑定到p
+     * @param request
+     * @param p
+     * @param limit
+     * @return
+     */
+    @RequestMapping("page/{p}/{type}")
+    public String newsList(HttpServletRequest request,@PathVariable(value = "p") int p,@PathVariable(value = "type") String type,@RequestParam(value = "limit", defaultValue = "6") int limit){
+        p=p<0||p> WebConst.MAX_PAGE ? 1 : p;
         articleExample example=new articleExample( );
-        example.setOrderByClause("created desc");
-        List<article> list=articleServiceDao.selectByExampleWithBLOBs(example);
+        PageInfo<article> list=articleServiceDao.selectByExampleWithBLOBs(p,type,limit);
         request.setAttribute("articles",list);
-        return  commoms.pre()+"news";
+        if(type.equals("活动")) {
+            return commoms.pre() + "news";
+        }else{
+            return commoms.pre() + "jobs";
+        }
 }
 
     /**

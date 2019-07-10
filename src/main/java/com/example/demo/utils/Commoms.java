@@ -17,8 +17,6 @@ public class Commoms {
     @Resource
     private ArticleServiceImp articleServiceImp;
 
-    @Resource
-    private WebServiceImp webServiceImp;
 
     static String pre="user/";
 
@@ -37,11 +35,11 @@ public class Commoms {
         return site_url("/article/" +  cid.toString());
     }
 
-    private static String site_url(String s) {
+    public  static String site_url(String s) {
         return site_option("site_url") + s;
     }
 
-    private static String site_option(String key) {
+    public  static String site_option(String key) {
         return site_option(key, "");
     }
 

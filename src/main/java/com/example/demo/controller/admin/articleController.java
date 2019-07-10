@@ -7,6 +7,8 @@ import com.example.demo.entity.dirExample;
 import com.example.demo.exception.TipException;
 import com.example.demo.service.ArticleServiceImp;
 import com.example.demo.service.CategoryServiceImp;
+import com.example.demo.service.LogServiceImp;
+import com.example.demo.utils.Types;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +26,8 @@ public class articleController {
     private ArticleServiceImp  articleServiceDao;
     @Resource
     private CategoryServiceImp categoryServiceImp;
-
+    @Resource
+    private LogServiceImp logServiceImp;
     /**
      * 文章列表
      * @param request
@@ -35,7 +38,7 @@ public class articleController {
         articleExample example = new articleExample();
         example.setOrderByClause("created desc");
         example.createCriteria().andTypeEqualTo("post");
-        List<article> articles=articleServiceDao.selectByExampleWithBLOBs(example);
+        List<article> articles=articleServiceDao .selectByExampleWithBLOBs(example);
 
         request.setAttribute("articles", articles);
         return "admin/article_list";
@@ -54,7 +57,6 @@ public class articleController {
         example.createCriteria().andCidEqualTo(Integer.valueOf(cid));
         List<article> articles=articleServiceDao.selectByExampleWithBLOBs(example);
         request.setAttribute("contents", articles.get(0));
-        System.out.println(articles.get(0).getContent());
         dirExample example2=new dirExample();
         List<dir> categories = categoryServiceImp.getMetaList(example2);
         request.setAttribute("categories", categories);
@@ -90,9 +92,34 @@ public class articleController {
         String msg = "文章发布失败";
         return RestResponseBo.fail(msg);
     }
+        logServiceImp.insertLog(Types.ADD_ARTICLE.getType(),null,request.getRemoteAddr(),1);
             return RestResponseBo.ok();
         }
 
+
+    /**
+     * 修改文章
+     * @param a
+     * @param request
+     * @return
+     */
+    @PostMapping("/modify")
+    @ResponseBody
+    @Transactional(rollbackFor = TipException.class)
+    public RestResponseBo modifyArticle(article a, HttpServletRequest request) {
+        a.setType("post");
+        if(StringUtils.isBlank(a.getCategories())){
+            a.setCategories("默认分类");
+        }
+        try{
+            articleServiceDao.update(a);
+        }catch (Exception e){
+            String msg = "文章发布失败";
+            return RestResponseBo.fail(msg);
+        }
+        logServiceImp.insertLog(Types.UP_ARTICLE.getType(),null,request.getRemoteAddr(),1);
+        return RestResponseBo.ok();
+    }
 
     /**
      * 删除文章
@@ -111,7 +138,9 @@ public RestResponseBo delete(@RequestParam int cid, HttpServletRequest request) 
         String msg = "文章删除失败";
         return RestResponseBo.fail(msg);
     }
-    return RestResponseBo.ok();
+        logServiceImp.insertLog(Types.DEL_ARTICLE.getType(),null,request.getRemoteAddr(),1);
+
+        return RestResponseBo.ok();
 }
 
 

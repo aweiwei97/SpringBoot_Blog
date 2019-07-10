@@ -318,11 +318,9 @@
     update article
     set title = #{title,jdbcType=VARCHAR},
       slug = #{slug,jdbcType=VARCHAR},
-      created = #{created,jdbcType=INTEGER},
       modified = #{modified,jdbcType=INTEGER},
       type = #{type,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
-      hits = #{hits,jdbcType=INTEGER},
       categories = #{categories,jdbcType=VARCHAR},
       content = #{content,jdbcType=LONGVARCHAR}
     where cid = #{cid,jdbcType=INTEGER}
