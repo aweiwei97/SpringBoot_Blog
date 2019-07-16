@@ -27,8 +27,9 @@ import java.util.List;
 public class pdShowController {
 @Resource
     private PdShowServiceImp showServiceImp;
-    public static final String CLASSPATH = commUtils.getUplodFilePath();
-
+  //  public static final String CLASSPATH = commUtils.getUplodFilePath();
+    //CentOS使用路径
+    public static final String CLASSPATH = commUtils.getCentOSPath();
     @RequestMapping("")
         public String show(HttpServletRequest request){
        pdShowExample example= new pdShowExample();
@@ -58,7 +59,7 @@ public class pdShowController {
         pdShow p;
         pdShowExample example= new pdShowExample();
         if(!fname.equals("")) {
-            fkey = commUtils.getFileKey(fname, "作品图"); //返回 /upload/YY/MM + "/" + UUID.UU32() + "." + 文件后缀
+            fkey = commUtils.getFileKey(fname, "Client"); //返回 /upload/YY/MM + "/" + UUID.UU32() + "." + 文件后缀
             File f = new File(CLASSPATH + fkey);
             try {
                 FileCopyUtils.copy(file[0].getInputStream(), new FileOutputStream(f));
@@ -100,7 +101,7 @@ public class pdShowController {
            p = new pdShow(fkey,title,url,1,Integer.valueOf(sort));
             showServiceImp.insert(p);
         }
-        return "redirect:";
+        return "redirect:/admin/pdShow";
     }
 
 
@@ -134,6 +135,7 @@ public class pdShowController {
             }
         }
         File file=new File(CLASSPATH +imgUrl);
+        file.delete();
         showServiceImp.deleteByPrimaryKey(id);
         return RestResponseBo.ok();
     }

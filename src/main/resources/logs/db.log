@@ -1,0 +1,969 @@
+2019-07-15 12:35:50.590 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on zhewei with PID 2484 (started by Administrator in D:\IntelliJ IDEA 2018.3.5\demo2)
+2019-07-15 12:35:50.590 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-15 12:35:50.591 [restartedMain] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2019-07-15 12:35:51.576 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2019-07-15 12:35:51.577 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'com.example.demo'
+2019-07-15 12:35:51.599 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\adminMapper.class]
+2019-07-15 12:35:51.599 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\advantageMapper.class]
+2019-07-15 12:35:51.599 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\articleMapper.class]
+2019-07-15 12:35:51.601 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\contactMapper.class]
+2019-07-15 12:35:51.608 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\dirMapper.class]
+2019-07-15 12:35:51.610 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\logMapper.class]
+2019-07-15 12:35:51.611 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\pdShowMapper.class]
+2019-07-15 12:35:51.611 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\relationshipMapper.class]
+2019-07-15 12:35:51.611 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\slideMapper.class]
+2019-07-15 12:35:51.611 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\webInfoMapper.class]
+2019-07-15 12:35:51.664 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'adminMapper' and 'com.example.demo.dao.adminMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'adminMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'advantageMapper' and 'com.example.demo.dao.advantageMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'advantageMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'articleMapper' and 'com.example.demo.dao.articleMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'articleMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'contactMapper' and 'com.example.demo.dao.contactMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'contactMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dirMapper' and 'com.example.demo.dao.dirMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'dirMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'logMapper' and 'com.example.demo.dao.logMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'logMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'pdShowMapper' and 'com.example.demo.dao.pdShowMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'pdShowMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'relationshipMapper' and 'com.example.demo.dao.relationshipMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'slideMapper' and 'com.example.demo.dao.slideMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'slideMapper'.
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'webInfoMapper' and 'com.example.demo.dao.webInfoMapper' mapperInterface
+2019-07-15 12:35:51.665 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'webInfoMapper'.
+2019-07-15 12:35:52.466 [restartedMain] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@19fabed6
+2019-07-15 12:35:52.574 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.example.demo.entity' for aliases
+2019-07-15 12:35:52.596 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'
+2019-07-15 12:35:52.620 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\advantageMapper.xml]'
+2019-07-15 12:35:52.647 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\articleMapper.xml]'
+2019-07-15 12:35:52.666 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\contactMapper.xml]'
+2019-07-15 12:35:52.683 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\dirMapper.xml]'
+2019-07-15 12:35:52.700 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\logMapper.xml]'
+2019-07-15 12:35:52.721 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\pdShowMapper.xml]'
+2019-07-15 12:35:52.733 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\relationshipMapper.xml]'
+2019-07-15 12:35:52.757 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\slideMapper.xml]'
+2019-07-15 12:35:52.776 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\webInfoMapper.xml]'
+2019-07-15 12:35:52.912 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:35:52.914 [restartedMain] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2019-07-15 12:35:52.915 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:35:52.915 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-07-15 12:35:52.915 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-07-15 12:35:52.915 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-07-15 12:35:52.916 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-07-15 12:35:52.916 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2019-07-15 12:35:52.916 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2019-07-15 12:35:52.916 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-07-15 12:35:52.916 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2019-07-15 12:35:52.929 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-07-15 12:35:52.929 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-07-15 12:35:52.929 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-07-15 12:35:52.929 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-07-15 12:35:52.930 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-07-15 12:35:53.195 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2019-07-15 12:35:53.660 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.237 seconds (JVM running for 395.919)
+2019-07-15 12:36:09.991 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-3 - configuration:
+2019-07-15 12:36:09.993 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2019-07-15 12:36:09.994 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2019-07-15 12:36:09.994 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2019-07-15 12:36:09.994 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2019-07-15 12:36:09.994 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.jdbc.Driver"
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://127.0.0.1:3306/hunsha?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2019-07-15 12:36:09.995 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-3"
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2019-07-15 12:36:09.996 [http-nio-8083-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2019-07-15 12:36:10.005 [http-nio-8083-exec-2] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@25860da5
+2019-07-15 12:36:10.006 [http-nio-8083-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2019-07-15 12:36:10.018 [http-nio-8083-exec-2] DEBUG org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-07-15 12:36:10.047 [http-nio-8083-exec-2] DEBUG org.thymeleaf.TemplateEngine.CONFIG - Initializing Thymeleaf Template engine configuration...
+[THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Thymeleaf version: 3.0.11.RELEASE (built 2018-10-28T22:35:28+0000)
+[THYMELEAF] * Cache Manager implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template resolvers:
+[THYMELEAF]     * org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers:
+[THYMELEAF]     * org.thymeleaf.spring5.messageresolver.SpringMessageResolver
+[THYMELEAF] * Link builders:
+[THYMELEAF]     * org.thymeleaf.linkbuilder.StandardLinkBuilder
+[THYMELEAF] * Dialect [1 of 2]: SpringStandard (org.thymeleaf.spring5.dialect.SpringStandardDialect)
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF]     * Processors for Template Mode: HTML
+[THYMELEAF]         * Element Tag Processors by [matching element and attribute name] [precedence]:
+[THYMELEAF]             * [* {th:include,data-th-include}] [100]: org.thymeleaf.standard.processor.StandardIncludeTagProcessor
+[THYMELEAF]             * [* {th:insert,data-th-insert}] [100]: org.thymeleaf.standard.processor.StandardInsertTagProcessor
+[THYMELEAF]             * [* {th:replace,data-th-replace}] [100]: org.thymeleaf.standard.processor.StandardReplaceTagProcessor
+[THYMELEAF]             * [* {th:substituteby,data-th-substituteby}] [100]: org.thymeleaf.standard.processor.StandardSubstituteByTagProcessor
+[THYMELEAF]             * [* {th:each,data-th-each}] [200]: org.thymeleaf.standard.processor.StandardEachTagProcessor
+[THYMELEAF]             * [* {th:switch,data-th-switch}] [250]: org.thymeleaf.standard.processor.StandardSwitchTagProcessor
+[THYMELEAF]             * [* {th:case,data-th-case}] [275]: org.thymeleaf.standard.processor.StandardCaseTagProcessor
+[THYMELEAF]             * [* {th:if,data-th-if}] [300]: org.thymeleaf.standard.processor.StandardIfTagProcessor
+[THYMELEAF]             * [* {th:unless,data-th-unless}] [400]: org.thymeleaf.standard.processor.StandardUnlessTagProcessor
+[THYMELEAF]             * [* {th:object,data-th-object}] [500]: org.thymeleaf.spring5.processor.SpringObjectTagProcessor
+[THYMELEAF]             * [* {th:with,data-th-with}] [600]: org.thymeleaf.standard.processor.StandardWithTagProcessor
+[THYMELEAF]             * [* {th:attr,data-th-attr}] [700]: org.thymeleaf.standard.processor.StandardAttrTagProcessor
+[THYMELEAF]             * [* {th:attrprepend,data-th-attrprepend}] [800]: org.thymeleaf.standard.processor.StandardAttrprependTagProcessor
+[THYMELEAF]             * [* {th:attrappend,data-th-attrappend}] [900]: org.thymeleaf.standard.processor.StandardAttrappendTagProcessor
+[THYMELEAF]             * [* {th:method,data-th-method}] [990]: org.thymeleaf.spring5.processor.SpringMethodTagProcessor
+[THYMELEAF]             * [* {th:alt-title,data-th-alt-title}] [990]: org.thymeleaf.standard.processor.StandardAltTitleTagProcessor
+[THYMELEAF]             * [* {th:lang-xmllang,data-th-lang-xmllang}] [990]: org.thymeleaf.standard.processor.StandardLangXmlLangTagProcessor
+[THYMELEAF]             * [* {th:action,data-th-action}] [1000]: org.thymeleaf.spring5.processor.SpringActionTagProcessor
+[THYMELEAF]             * [* {th:href,data-th-href}] [1000]: org.thymeleaf.spring5.processor.SpringHrefTagProcessor
+[THYMELEAF]             * [* {th:src,data-th-src}] [1000]: org.thymeleaf.spring5.processor.SpringSrcTagProcessor
+[THYMELEAF]             * [* {th:required,data-th-required}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:disabled,data-th-disabled}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:readonly,data-th-readonly}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:loop,data-th-loop}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:nowrap,data-th-nowrap}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:multiple,data-th-multiple}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:default,data-th-default}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:hidden,data-th-hidden}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:scoped,data-th-scoped}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:controls,data-th-controls}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:declare,data-th-declare}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:formnovalidate,data-th-formnovalidate}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:open,data-th-open}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:async,data-th-async}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:novalidate,data-th-novalidate}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:ismap,data-th-ismap}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:autofocus,data-th-autofocus}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:defer,data-th-defer}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:pubdate,data-th-pubdate}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:autoplay,data-th-autoplay}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:checked,data-th-checked}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:seamless,data-th-seamless}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:selected,data-th-selected}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:reversed,data-th-reversed}] [1000]: org.thymeleaf.standard.processor.StandardConditionalFixedValueTagProcessor
+[THYMELEAF]             * [* {th:onerror,data-th-onerror}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onabort,data-th-onabort}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onforminput,data-th-onforminput}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:oncanplaythrough,data-th-oncanplaythrough}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondragenter,data-th-ondragenter}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onbeforeprint,data-th-onbeforeprint}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onoffline,data-th-onoffline}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onloadedmetadata,data-th-onloadedmetadata}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:oninput,data-th-oninput}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:oncontextmenu,data-th-oncontextmenu}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onbeforeunload,data-th-onbeforeunload}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onemptied,data-th-onemptied}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onclick,data-th-onclick}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onkeypress,data-th-onkeypress}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onsuspend,data-th-onsuspend}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onstalled,data-th-onstalled}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onscroll,data-th-onscroll}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmousemove,data-th-onmousemove}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onplaying,data-th-onplaying}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onformchange,data-th-onformchange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onkeydown,data-th-onkeydown}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmouseup,data-th-onmouseup}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onprogress,data-th-onprogress}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:oncanplay,data-th-oncanplay}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onloadeddata,data-th-onloadeddata}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onkeyup,data-th-onkeyup}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onpopstate,data-th-onpopstate}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondragover,data-th-ondragover}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onload,data-th-onload}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondrop,data-th-ondrop}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onended,data-th-onended}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondurationchange,data-th-ondurationchange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onreadystatechange,data-th-onreadystatechange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmouseout,data-th-onmouseout}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onredo,data-th-onredo}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onafterprint,data-th-onafterprint}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onunload,data-th-onunload}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmessage,data-th-onmessage}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onratechange,data-th-onratechange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondrag,data-th-ondrag}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onreset,data-th-onreset}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onplay,data-th-onplay}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondragstart,data-th-ondragstart}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onundo,data-th-onundo}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmousedown,data-th-onmousedown}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onfocus,data-th-onfocus}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onwaiting,data-th-onwaiting}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onstorage,data-th-onstorage}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onchange,data-th-onchange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ontimeupdate,data-th-ontimeupdate}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onshow,data-th-onshow}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ononline,data-th-ononline}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondblclick,data-th-ondblclick}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmouseover,data-th-onmouseover}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onhashchange,data-th-onhashchange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onpause,data-th-onpause}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onselect,data-th-onselect}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onvolumechange,data-th-onvolumechange}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onsubmit,data-th-onsubmit}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondragend,data-th-ondragend}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onmousewheel,data-th-onmousewheel}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onseeked,data-th-onseeked}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onloadstart,data-th-onloadstart}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onblur,data-th-onblur}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onseeking,data-th-onseeking}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:onresize,data-th-onresize}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:oninvalid,data-th-oninvalid}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:ondragleave,data-th-ondragleave}] [1000]: org.thymeleaf.standard.processor.StandardDOMEventAttributeTagProcessor
+[THYMELEAF]             * [* {th:inline,data-th-inline}] [1000]: org.thymeleaf.standard.processor.StandardInlineHTMLTagProcessor
+[THYMELEAF]             * [* {th:type,data-th-type}] [1000]: org.thymeleaf.standard.processor.StandardNonRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:name,data-th-name}] [1000]: org.thymeleaf.standard.processor.StandardNonRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:bgcolor,data-th-bgcolor}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:list,data-th-list}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:charset,data-th-charset}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:hspace,data-th-hspace}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:span,data-th-span}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:radiogroup,data-th-radiogroup}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:lang,data-th-lang}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:formmethod,data-th-formmethod}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:usemap,data-th-usemap}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:form,data-th-form}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:autocomplete,data-th-autocomplete}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:challenge,data-th-challenge}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:tabindex,data-th-tabindex}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:border,data-th-border}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:for,data-th-for}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:class,data-th-class}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:scheme,data-th-scheme}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:srclang,data-th-srclang}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:min,data-th-min}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:style,data-th-style}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:cellspacing,data-th-cellspacing}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:step,data-th-step}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:preload,data-th-preload}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:placeholder,data-th-placeholder}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:dir,data-th-dir}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:spellcheck,data-th-spellcheck}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:maxlength,data-th-maxlength}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:frame,data-th-frame}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:size,data-th-size}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:accept-charset,data-th-accept-charset}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:manifest,data-th-manifest}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:hreflang,data-th-hreflang}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:label,data-th-label}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:compact,data-th-compact}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:contextmenu,data-th-contextmenu}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:title,data-th-title}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:formaction,data-th-formaction}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:keytype,data-th-keytype}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:cite,data-th-cite}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:frameborder,data-th-frameborder}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:colspan,data-th-colspan}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:marginwidth,data-th-marginwidth}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:align,data-th-align}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:poster,data-th-poster}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:target,data-th-target}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:dropzone,data-th-dropzone}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:formtarget,data-th-formtarget}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:background,data-th-background}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:rules,data-th-rules}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:classid,data-th-classid}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:datetime,data-th-datetime}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:draggable,data-th-draggable}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:sizes,data-th-sizes}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:height,data-th-height}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:longdesc,data-th-longdesc}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:enctype,data-th-enctype}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:codebase,data-th-codebase}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:start,data-th-start}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:rel,data-th-rel}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:rowspan,data-th-rowspan}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:media,data-th-media}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:accesskey,data-th-accesskey}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:optimum,data-th-optimum}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:sandbox,data-th-sandbox}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:pattern,data-th-pattern}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:vspace,data-th-vspace}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:formenctype,data-th-formenctype}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:http-equiv,data-th-http-equiv}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:codetype,data-th-codetype}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:contenteditable,data-th-contenteditable}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:width,data-th-width}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:alt,data-th-alt}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:wrap,data-th-wrap}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:max,data-th-max}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:axis,data-th-axis}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:abbr,data-th-abbr}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:id,data-th-id}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:marginheight,data-th-marginheight}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:headers,data-th-headers}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:cols,data-th-cols}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:accept,data-th-accept}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:cellpadding,data-th-cellpadding}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:low,data-th-low}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:valuetype,data-th-valuetype}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:standby,data-th-standby}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:rev,data-th-rev}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:archive,data-th-archive}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:data,data-th-data}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:audio,data-th-audio}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:scrolling,data-th-scrolling}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:icon,data-th-icon}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:content,data-th-content}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:high,data-th-high}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:rows,data-th-rows}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:scope,data-th-scope}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:kind,data-th-kind}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:summary,data-th-summary}] [1000]: org.thymeleaf.standard.processor.StandardRemovableAttributeTagProcessor
+[THYMELEAF]             * [* {th:xmlbase,data-th-xmlbase}] [1000]: org.thymeleaf.standard.processor.StandardXmlBaseTagProcessor
+[THYMELEAF]             * [* {th:xmllang,data-th-xmllang}] [1000]: org.thymeleaf.standard.processor.StandardXmlLangTagProcessor
+[THYMELEAF]             * [* {xmlns:th}] [1000]: org.thymeleaf.standard.processor.StandardXmlNsTagProcessor
+[THYMELEAF]             * [* {th:xmlspace,data-th-xmlspace}] [1000]: org.thymeleaf.standard.processor.StandardXmlSpaceTagProcessor
+[THYMELEAF]             * [{option} *] [1005]: org.thymeleaf.spring5.processor.SpringOptionInSelectFieldTagProcessor
+[THYMELEAF]             * [* {th:value,data-th-value}] [1010]: org.thymeleaf.spring5.processor.SpringValueTagProcessor
+[THYMELEAF]             * [* {th:classappend,data-th-classappend}] [1100]: org.thymeleaf.standard.processor.StandardClassappendTagProcessor
+[THYMELEAF]             * [* {th:styleappend,data-th-styleappend}] [1100]: org.thymeleaf.standard.processor.StandardStyleappendTagProcessor
+[THYMELEAF]             * [* {th:text,data-th-text}] [1300]: org.thymeleaf.standard.processor.StandardTextTagProcessor
+[THYMELEAF]             * [* {th:utext,data-th-utext}] [1400]: org.thymeleaf.standard.processor.StandardUtextTagProcessor
+[THYMELEAF]             * [* {th:fragment,data-th-fragment}] [1500]: org.thymeleaf.standard.processor.StandardFragmentTagProcessor
+[THYMELEAF]             * [* {th:assert,data-th-assert}] [1550]: org.thymeleaf.standard.processor.StandardAssertTagProcessor
+[THYMELEAF]             * [* {th:remove,data-th-remove}] [1600]: org.thymeleaf.standard.processor.StandardRemoveTagProcessor
+[THYMELEAF]             * [* {th:errors,data-th-errors}] [1700]: org.thymeleaf.spring5.processor.SpringErrorsTagProcessor
+[THYMELEAF]             * [{input} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringInputCheckboxFieldTagProcessor
+[THYMELEAF]             * [{input} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringInputFileFieldTagProcessor
+[THYMELEAF]             * [{input} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringInputGeneralFieldTagProcessor
+[THYMELEAF]             * [{input} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringInputPasswordFieldTagProcessor
+[THYMELEAF]             * [{input} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringInputRadioFieldTagProcessor
+[THYMELEAF]             * [{option} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringOptionFieldTagProcessor
+[THYMELEAF]             * [{select} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringSelectFieldTagProcessor
+[THYMELEAF]             * [{textarea} {th:field,data-th-field}] [1700]: org.thymeleaf.spring5.processor.SpringTextareaFieldTagProcessor
+[THYMELEAF]             * [* {th:uerrors,data-th-uerrors}] [1700]: org.thymeleaf.spring5.processor.SpringUErrorsTagProcessor
+[THYMELEAF]             * [* {th:errorclass,data-th-errorclass}] [1800]: org.thymeleaf.spring5.processor.SpringErrorClassTagProcessor
+[THYMELEAF]             * [* {th:ref,data-th-ref}] [10000]: org.thymeleaf.standard.processor.StandardRefAttributeTagProcessor
+[THYMELEAF]             * [{th:block,th-block} *] [100000]: org.thymeleaf.standard.processor.StandardBlockTagProcessor
+[THYMELEAF]             * [* th:*] [2147483647]: org.thymeleaf.standard.processor.StandardDefaultAttributesTagProcessor
+[THYMELEAF]         * Text Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningTextProcessor
+[THYMELEAF]         * DOCTYPE Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardTranslationDocTypeProcessor
+[THYMELEAF]         * CDATA Section Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningCDATASectionProcessor
+[THYMELEAF]         * Comment Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningCommentProcessor
+[THYMELEAF]             * [1100]: org.thymeleaf.standard.processor.StandardConditionalCommentProcessor
+[THYMELEAF]     * Processors for Template Mode: XML
+[THYMELEAF]         * Element Tag Processors by [matching element and attribute name] [precedence]:
+[THYMELEAF]             * [* {th:include}] [100]: org.thymeleaf.standard.processor.StandardIncludeTagProcessor
+[THYMELEAF]             * [* {th:insert}] [100]: org.thymeleaf.standard.processor.StandardInsertTagProcessor
+[THYMELEAF]             * [* {th:replace}] [100]: org.thymeleaf.standard.processor.StandardReplaceTagProcessor
+[THYMELEAF]             * [* {th:substituteby}] [100]: org.thymeleaf.standard.processor.StandardSubstituteByTagProcessor
+[THYMELEAF]             * [* {th:each}] [200]: org.thymeleaf.standard.processor.StandardEachTagProcessor
+[THYMELEAF]             * [* {th:switch}] [250]: org.thymeleaf.standard.processor.StandardSwitchTagProcessor
+[THYMELEAF]             * [* {th:case}] [275]: org.thymeleaf.standard.processor.StandardCaseTagProcessor
+[THYMELEAF]             * [* {th:if}] [300]: org.thymeleaf.standard.processor.StandardIfTagProcessor
+[THYMELEAF]             * [* {th:unless}] [400]: org.thymeleaf.standard.processor.StandardUnlessTagProcessor
+[THYMELEAF]             * [* {th:object}] [500]: org.thymeleaf.standard.processor.StandardObjectTagProcessor
+[THYMELEAF]             * [* {th:with}] [600]: org.thymeleaf.standard.processor.StandardWithTagProcessor
+[THYMELEAF]             * [* {th:attr}] [700]: org.thymeleaf.standard.processor.StandardAttrTagProcessor
+[THYMELEAF]             * [* {th:attrprepend}] [800]: org.thymeleaf.standard.processor.StandardAttrprependTagProcessor
+[THYMELEAF]             * [* {th:attrappend}] [900]: org.thymeleaf.standard.processor.StandardAttrappendTagProcessor
+[THYMELEAF]             * [* {th:inline}] [1000]: org.thymeleaf.standard.processor.StandardInlineXMLTagProcessor
+[THYMELEAF]             * [* {xmlns:th}] [1000]: org.thymeleaf.standard.processor.StandardXmlNsTagProcessor
+[THYMELEAF]             * [* {th:text}] [1300]: org.thymeleaf.standard.processor.StandardTextTagProcessor
+[THYMELEAF]             * [* {th:utext}] [1400]: org.thymeleaf.standard.processor.StandardUtextTagProcessor
+[THYMELEAF]             * [* {th:fragment}] [1500]: org.thymeleaf.standard.processor.StandardFragmentTagProcessor
+[THYMELEAF]             * [* {th:assert}] [1550]: org.thymeleaf.standard.processor.StandardAssertTagProcessor
+[THYMELEAF]             * [* {th:remove}] [1600]: org.thymeleaf.standard.processor.StandardRemoveTagProcessor
+[THYMELEAF]             * [* {th:ref}] [10000]: org.thymeleaf.standard.processor.StandardRefAttributeTagProcessor
+[THYMELEAF]             * [{th:block} *] [100000]: org.thymeleaf.standard.processor.StandardBlockTagProcessor
+[THYMELEAF]             * [* th:*] [2147483647]: org.thymeleaf.standard.processor.StandardDefaultAttributesTagProcessor
+[THYMELEAF]         * Text Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningTextProcessor
+[THYMELEAF]         * CDATA Section Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningCDATASectionProcessor
+[THYMELEAF]         * Comment Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningCommentProcessor
+[THYMELEAF]     * Processors for Template Mode: TEXT
+[THYMELEAF]         * Element Tag Processors by [matching element and attribute name] [precedence]:
+[THYMELEAF]             * [* {th:insert}] [100]: org.thymeleaf.standard.processor.StandardInsertTagProcessor
+[THYMELEAF]             * [* {th:replace}] [100]: org.thymeleaf.standard.processor.StandardReplaceTagProcessor
+[THYMELEAF]             * [* {th:each}] [200]: org.thymeleaf.standard.processor.StandardEachTagProcessor
+[THYMELEAF]             * [* {th:switch}] [250]: org.thymeleaf.standard.processor.StandardSwitchTagProcessor
+[THYMELEAF]             * [* {th:case}] [275]: org.thymeleaf.standard.processor.StandardCaseTagProcessor
+[THYMELEAF]             * [* {th:if}] [300]: org.thymeleaf.standard.processor.StandardIfTagProcessor
+[THYMELEAF]             * [* {th:unless}] [400]: org.thymeleaf.standard.processor.StandardUnlessTagProcessor
+[THYMELEAF]             * [* {th:object}] [500]: org.thymeleaf.standard.processor.StandardObjectTagProcessor
+[THYMELEAF]             * [* {th:with}] [600]: org.thymeleaf.standard.processor.StandardWithTagProcessor
+[THYMELEAF]             * [* {th:inline}] [1000]: org.thymeleaf.standard.processor.StandardInlineTextualTagProcessor
+[THYMELEAF]             * [* {th:text}] [1300]: org.thymeleaf.standard.processor.StandardTextTagProcessor
+[THYMELEAF]             * [* {th:utext}] [1400]: org.thymeleaf.standard.processor.StandardUtextTagProcessor
+[THYMELEAF]             * [* {th:assert}] [1550]: org.thymeleaf.standard.processor.StandardAssertTagProcessor
+[THYMELEAF]             * [* {th:remove}] [1600]: org.thymeleaf.standard.processor.StandardRemoveTagProcessor
+[THYMELEAF]             * [{th:block} *] [100000]: org.thymeleaf.standard.processor.StandardBlockTagProcessor
+[THYMELEAF]             * [* 100000] [org.thymeleaf.standard.processor.StandardBlockTagProcessor]: {}
+[THYMELEAF]         * Text Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningTextProcessor
+[THYMELEAF]     * Processors for Template Mode: JAVASCRIPT
+[THYMELEAF]         * Element Tag Processors by [matching element and attribute name] [precedence]:
+[THYMELEAF]             * [* {th:insert}] [100]: org.thymeleaf.standard.processor.StandardInsertTagProcessor
+[THYMELEAF]             * [* {th:replace}] [100]: org.thymeleaf.standard.processor.StandardReplaceTagProcessor
+[THYMELEAF]             * [* {th:each}] [200]: org.thymeleaf.standard.processor.StandardEachTagProcessor
+[THYMELEAF]             * [* {th:switch}] [250]: org.thymeleaf.standard.processor.StandardSwitchTagProcessor
+[THYMELEAF]             * [* {th:case}] [275]: org.thymeleaf.standard.processor.StandardCaseTagProcessor
+[THYMELEAF]             * [* {th:if}] [300]: org.thymeleaf.standard.processor.StandardIfTagProcessor
+[THYMELEAF]             * [* {th:unless}] [400]: org.thymeleaf.standard.processor.StandardUnlessTagProcessor
+[THYMELEAF]             * [* {th:object}] [500]: org.thymeleaf.standard.processor.StandardObjectTagProcessor
+[THYMELEAF]             * [* {th:with}] [600]: org.thymeleaf.standard.processor.StandardWithTagProcessor
+[THYMELEAF]             * [* {th:inline}] [1000]: org.thymeleaf.standard.processor.StandardInlineTextualTagProcessor
+[THYMELEAF]             * [* {th:text}] [1300]: org.thymeleaf.standard.processor.StandardTextTagProcessor
+[THYMELEAF]             * [* {th:utext}] [1400]: org.thymeleaf.standard.processor.StandardUtextTagProcessor
+[THYMELEAF]             * [* {th:assert}] [1550]: org.thymeleaf.standard.processor.StandardAssertTagProcessor
+[THYMELEAF]             * [* {th:remove}] [1600]: org.thymeleaf.standard.processor.StandardRemoveTagProcessor
+[THYMELEAF]             * [* 100000] [org.thymeleaf.standard.processor.StandardBlockTagProcessor]: {}
+[THYMELEAF]             * [{th:block} *] [100000]: org.thymeleaf.standard.processor.StandardBlockTagProcessor
+[THYMELEAF]         * Text Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningTextProcessor
+[THYMELEAF]     * Processors for Template Mode: CSS
+[THYMELEAF]         * Element Tag Processors by [matching element and attribute name] [precedence]:
+[THYMELEAF]             * [* {th:insert}] [100]: org.thymeleaf.standard.processor.StandardInsertTagProcessor
+[THYMELEAF]             * [* {th:replace}] [100]: org.thymeleaf.standard.processor.StandardReplaceTagProcessor
+[THYMELEAF]             * [* {th:each}] [200]: org.thymeleaf.standard.processor.StandardEachTagProcessor
+[THYMELEAF]             * [* {th:switch}] [250]: org.thymeleaf.standard.processor.StandardSwitchTagProcessor
+[THYMELEAF]             * [* {th:case}] [275]: org.thymeleaf.standard.processor.StandardCaseTagProcessor
+[THYMELEAF]             * [* {th:if}] [300]: org.thymeleaf.standard.processor.StandardIfTagProcessor
+[THYMELEAF]             * [* {th:unless}] [400]: org.thymeleaf.standard.processor.StandardUnlessTagProcessor
+[THYMELEAF]             * [* {th:object}] [500]: org.thymeleaf.standard.processor.StandardObjectTagProcessor
+[THYMELEAF]             * [* {th:with}] [600]: org.thymeleaf.standard.processor.StandardWithTagProcessor
+[THYMELEAF]             * [* {th:inline}] [1000]: org.thymeleaf.standard.processor.StandardInlineTextualTagProcessor
+[THYMELEAF]             * [* {th:text}] [1300]: org.thymeleaf.standard.processor.StandardTextTagProcessor
+[THYMELEAF]             * [* {th:utext}] [1400]: org.thymeleaf.standard.processor.StandardUtextTagProcessor
+[THYMELEAF]             * [* {th:assert}] [1550]: org.thymeleaf.standard.processor.StandardAssertTagProcessor
+[THYMELEAF]             * [* {th:remove}] [1600]: org.thymeleaf.standard.processor.StandardRemoveTagProcessor
+[THYMELEAF]             * [* 100000] [org.thymeleaf.standard.processor.StandardBlockTagProcessor]: {}
+[THYMELEAF]             * [{th:block} *] [100000]: org.thymeleaf.standard.processor.StandardBlockTagProcessor
+[THYMELEAF]         * Text Processors by [precedence]:
+[THYMELEAF]             * [1000]: org.thymeleaf.standard.processor.StandardInliningTextProcessor
+[THYMELEAF]     * Expression Objects:
+[THYMELEAF]         * #ctx
+[THYMELEAF]         * #root
+[THYMELEAF]         * #vars
+[THYMELEAF]         * #object
+[THYMELEAF]         * #locale
+[THYMELEAF]         * #request
+[THYMELEAF]         * #response
+[THYMELEAF]         * #session
+[THYMELEAF]         * #servletContext
+[THYMELEAF]         * #conversions
+[THYMELEAF]         * #uris
+[THYMELEAF]         * #calendars
+[THYMELEAF]         * #dates
+[THYMELEAF]         * #bools
+[THYMELEAF]         * #numbers
+[THYMELEAF]         * #objects
+[THYMELEAF]         * #strings
+[THYMELEAF]         * #arrays
+[THYMELEAF]         * #lists
+[THYMELEAF]         * #sets
+[THYMELEAF]         * #maps
+[THYMELEAF]         * #aggregates
+[THYMELEAF]         * #messages
+[THYMELEAF]         * #ids
+[THYMELEAF]         * #execInfo
+[THYMELEAF]         * #httpServletRequest
+[THYMELEAF]         * #httpSession
+[THYMELEAF]         * #fields
+[THYMELEAF]         * #themes
+[THYMELEAF]         * #mvc
+[THYMELEAF]         * #requestdatavalues
+[THYMELEAF]     * Execution Attributes:
+[THYMELEAF]         * "StandardExpressionParser": Standard Expression Parser
+[THYMELEAF]         * "StandardJavaScriptSerializer": org.thymeleaf.standard.serializer.StandardJavaScriptSerializer@4733d48d
+[THYMELEAF]         * "StandardCSSSerializer": org.thymeleaf.standard.serializer.StandardCSSSerializer@7b73496e
+[THYMELEAF]         * "EnableSpringELCompiler": false
+[THYMELEAF]         * "StandardVariableExpressionEvaluator": SpringEL
+[THYMELEAF]         * "StandardConversionService": org.thymeleaf.spring5.expression.SpringStandardConversionService@3b4e6f35
+[THYMELEAF] * Dialect [2 of 2]: java8time (org.thymeleaf.extras.java8time.dialect.Java8TimeDialect)
+[THYMELEAF]     * Expression Objects:
+[THYMELEAF]         * #temporals
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-07-15 12:36:10.048 [http-nio-8083-exec-2] DEBUG org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-07-15 12:36:10.108 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2019-07-15 12:36:10.118 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@26a73441
+2019-07-15 12:36:10.126 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@70ceca64
+2019-07-15 12:36:10.131 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@2261b4cf
+2019-07-15 12:36:10.136 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@7b4c3c9f
+2019-07-15 12:36:10.142 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@5fd3515d
+2019-07-15 12:36:10.147 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@48b46de
+2019-07-15 12:36:10.153 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@31f948e8
+2019-07-15 12:36:10.161 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@3dc62fbb
+2019-07-15 12:36:10.173 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.jdbc.JDBC4Connection@72d34b70
+2019-07-15 12:36:10.173 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:36:11.083 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.083 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.084 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@240230963 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will be managed by Spring
+2019-07-15 12:36:11.085 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - ==>  Preparing: select count(*) from admin WHERE ( name = ? ) 
+2019-07-15 12:36:11.085 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - ==>  Preparing: select count(*) from admin WHERE ( name = ? ) 
+2019-07-15 12:36:11.087 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - ==> Parameters: admin(String)
+2019-07-15 12:36:11.087 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - ==> Parameters: admin(String)
+2019-07-15 12:36:11.089 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.089 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.090 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.092 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943] from current transaction
+2019-07-15 12:36:11.093 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, id, name, password, power from admin WHERE ( name = ? and password = ? ) 
+2019-07-15 12:36:11.093 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, id, name, password, power from admin WHERE ( name = ? and password = ? ) 
+2019-07-15 12:36:11.093 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - ==> Parameters: admin(String), a66abb5684c45962d887564f08346e8d(String)
+2019-07-15 12:36:11.093 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - ==> Parameters: admin(String), a66abb5684c45962d887564f08346e8d(String)
+2019-07-15 12:36:11.094 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - <==      Total: 1
+2019-07-15 12:36:11.094 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.adminMapper.selectByExample - <==      Total: 1
+2019-07-15 12:36:11.094 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.095 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943] from current transaction
+2019-07-15 12:36:11.096 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - ==>  Preparing: insert into log ( action, author_id, ip, created ) values ( ?, ?, ?, ? ) 
+2019-07-15 12:36:11.096 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - ==>  Preparing: insert into log ( action, author_id, ip, created ) values ( ?, ?, ?, ? ) 
+2019-07-15 12:36:11.096 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - ==> Parameters: 登录后台(String), 1(Integer), 0:0:0:0:0:0:0:1(String), 1563165371(Integer)
+2019-07-15 12:36:11.096 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - ==> Parameters: 登录后台(String), 1(Integer), 0:0:0:0:0:0:0:1(String), 1563165371(Integer)
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - <==    Updates: 1
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG com.example.demo.dao.logMapper.insertSelective - <==    Updates: 1
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.097 [http-nio-8083-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a9c943]
+2019-07-15 12:36:11.124 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.124 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63508785] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.125 [http-nio-8083-exec-1] DEBUG SQL_CACHE - Cache Hit Ratio [SQL_CACHE]: 0.0
+2019-07-15 12:36:11.127 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@137595632 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.127 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - ==>  Preparing: SELECT count(0) FROM article 
+2019-07-15 12:36:11.127 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - ==>  Preparing: SELECT count(0) FROM article 
+2019-07-15 12:36:11.128 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.128 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.129 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - <==      Total: 1
+2019-07-15 12:36:11.129 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs_COUNT - <==      Total: 1
+2019-07-15 12:36:11.129 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==>  Preparing: select 'true' as QUERYID, cid, title, slug, created, modified, type, status, hits, categories , content from article order by created desc LIMIT ? 
+2019-07-15 12:36:11.129 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==>  Preparing: select 'true' as QUERYID, cid, title, slug, created, modified, type, status, hits, categories , content from article order by created desc LIMIT ? 
+2019-07-15 12:36:11.130 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==> Parameters: 5(Integer)
+2019-07-15 12:36:11.130 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==> Parameters: 5(Integer)
+2019-07-15 12:36:11.132 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - <==      Total: 5
+2019-07-15 12:36:11.132 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - <==      Total: 5
+2019-07-15 12:36:11.133 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63508785]
+2019-07-15 12:36:11.133 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.134 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bb13c68] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.134 [http-nio-8083-exec-1] DEBUG SQL_CACHE - Cache Hit Ratio [SQL_CACHE]: 0.0
+2019-07-15 12:36:11.134 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1110654976 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.135 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM contact 
+2019-07-15 12:36:11.135 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM contact 
+2019-07-15 12:36:11.135 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.135 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.136 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - <==      Total: 1
+2019-07-15 12:36:11.136 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample_COUNT - <==      Total: 1
+2019-07-15 12:36:11.138 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, con_id, name, num, content, date from contact order by con_id desc LIMIT ? 
+2019-07-15 12:36:11.138 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, con_id, name, num, content, date from contact order by con_id desc LIMIT ? 
+2019-07-15 12:36:11.139 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - ==> Parameters: 5(Integer)
+2019-07-15 12:36:11.139 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - ==> Parameters: 5(Integer)
+2019-07-15 12:36:11.141 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - <==      Total: 2
+2019-07-15 12:36:11.141 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.selectByExample - <==      Total: 2
+2019-07-15 12:36:11.141 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bb13c68]
+2019-07-15 12:36:11.141 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.141 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20eb93c0] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.142 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1119715743 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.142 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - ==>  Preparing: select id, webName, webUrl, intro, fileInfo, copyRight, email, logo_url, weChat, adress, phone from webinfo where id = ? 
+2019-07-15 12:36:11.142 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - ==>  Preparing: select id, webName, webUrl, intro, fileInfo, copyRight, email, logo_url, weChat, adress, phone from webinfo where id = ? 
+2019-07-15 12:36:11.142 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2019-07-15 12:36:11.142 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2019-07-15 12:36:11.143 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - <==      Total: 1
+2019-07-15 12:36:11.143 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.webInfoMapper.selectByPrimaryKey - <==      Total: 1
+2019-07-15 12:36:11.143 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20eb93c0]
+2019-07-15 12:36:11.144 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.144 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d7bd751] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.145 [http-nio-8083-exec-1] DEBUG SQL_CACHE - Cache Hit Ratio [SQL_CACHE]: 0.0
+2019-07-15 12:36:11.145 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@333711384 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM log 
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM log 
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - ==> Parameters: 
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - <==      Total: 1
+2019-07-15 12:36:11.146 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample_COUNT - <==      Total: 1
+2019-07-15 12:36:11.147 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, id, action, data, author_id, ip, created from log order by id desc LIMIT ? 
+2019-07-15 12:36:11.147 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, id, action, data, author_id, ip, created from log order by id desc LIMIT ? 
+2019-07-15 12:36:11.148 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - ==> Parameters: 20(Integer)
+2019-07-15 12:36:11.148 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - ==> Parameters: 20(Integer)
+2019-07-15 12:36:11.152 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - <==      Total: 20
+2019-07-15 12:36:11.152 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.logMapper.selectByExample - <==      Total: 20
+2019-07-15 12:36:11.153 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d7bd751]
+2019-07-15 12:36:11.154 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.155 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21e67bdd] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.156 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1862062130 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.156 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - ==>  Preparing: select count(*) from contact 
+2019-07-15 12:36:11.156 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - ==>  Preparing: select count(*) from contact 
+2019-07-15 12:36:11.157 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - ==> Parameters: 
+2019-07-15 12:36:11.157 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - ==> Parameters: 
+2019-07-15 12:36:11.158 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.158 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.contactMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.159 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21e67bdd]
+2019-07-15 12:36:11.159 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:11.159 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16885a41] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:11.160 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1984164290 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:11.161 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - ==>  Preparing: select count(*) from article 
+2019-07-15 12:36:11.161 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - ==>  Preparing: select count(*) from article 
+2019-07-15 12:36:11.161 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - ==> Parameters: 
+2019-07-15 12:36:11.161 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - ==> Parameters: 
+2019-07-15 12:36:11.162 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.162 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.articleMapper.countByExample - <==      Total: 1
+2019-07-15 12:36:11.163 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16885a41]
+2019-07-15 12:36:12.146 [http-nio-8083-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:12.146 [http-nio-8083-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19d9cc08] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:12.148 [http-nio-8083-exec-6] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@387850563 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:12.148 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==>  Preparing: select 'true' as QUERYID, cid, title, slug, created, modified, type, status, hits, categories , content from article WHERE ( type = ? ) order by created desc 
+2019-07-15 12:36:12.148 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==>  Preparing: select 'true' as QUERYID, cid, title, slug, created, modified, type, status, hits, categories , content from article WHERE ( type = ? ) order by created desc 
+2019-07-15 12:36:12.149 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==> Parameters: post(String)
+2019-07-15 12:36:12.149 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - ==> Parameters: post(String)
+2019-07-15 12:36:12.157 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - <==      Total: 16
+2019-07-15 12:36:12.157 [http-nio-8083-exec-6] DEBUG com.example.demo.dao.articleMapper.selectByExampleWithBLOBs - <==      Total: 16
+2019-07-15 12:36:12.157 [http-nio-8083-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19d9cc08]
+2019-07-15 12:36:12.744 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2019-07-15 12:36:12.744 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@187fa1b0] was not registered for synchronization because synchronization is not active
+2019-07-15 12:36:12.745 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1190004710 wrapping com.mysql.jdbc.JDBC4Connection@25860da5] will not be managed by Spring
+2019-07-15 12:36:12.745 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, mid, name from dir 
+2019-07-15 12:36:12.745 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - ==>  Preparing: select 'true' as QUERYID, mid, name from dir 
+2019-07-15 12:36:12.745 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - ==> Parameters: 
+2019-07-15 12:36:12.745 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - ==> Parameters: 
+2019-07-15 12:36:12.746 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - <==      Total: 3
+2019-07-15 12:36:12.746 [http-nio-8083-exec-1] DEBUG com.example.demo.dao.dirMapper.selectByExample - <==      Total: 3
+2019-07-15 12:36:12.746 [http-nio-8083-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@187fa1b0]
+2019-07-15 12:36:40.109 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:37:10.109 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:37:40.110 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:38:10.111 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:38:40.113 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:38:49.880 [Thread-34] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2019-07-15 12:38:49.884 [Thread-34] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2019-07-15 12:38:49.905 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@25860da5: (connection evicted)
+2019-07-15 12:38:49.905 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@26a73441: (connection evicted)
+2019-07-15 12:38:49.907 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@70ceca64: (connection evicted)
+2019-07-15 12:38:49.908 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@2261b4cf: (connection evicted)
+2019-07-15 12:38:49.909 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@7b4c3c9f: (connection evicted)
+2019-07-15 12:38:49.909 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@5fd3515d: (connection evicted)
+2019-07-15 12:38:49.910 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@48b46de: (connection evicted)
+2019-07-15 12:38:49.911 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@31f948e8: (connection evicted)
+2019-07-15 12:38:49.911 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@3dc62fbb: (connection evicted)
+2019-07-15 12:38:49.912 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection com.mysql.jdbc.JDBC4Connection@72d34b70: (connection evicted)
+2019-07-15 12:38:49.914 [Thread-34] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2019-07-15 12:38:49.914 [Thread-34] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2019-07-15 12:39:13.009 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on zhewei with PID 2484 (started by Administrator in D:\IntelliJ IDEA 2018.3.5\demo2)
+2019-07-15 12:39:13.010 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-15 12:39:13.010 [restartedMain] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2019-07-15 12:39:13.762 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2019-07-15 12:39:13.766 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'com.example.demo'
+2019-07-15 12:39:13.767 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2019-07-15 12:39:14.468 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:14.469 [restartedMain] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2019-07-15 12:39:14.471 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:14.472 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-07-15 12:39:14.472 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-07-15 12:39:14.472 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-07-15 12:39:14.472 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-07-15 12:39:14.473 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2019-07-15 12:39:14.473 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2019-07-15 12:39:14.477 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-07-15 12:39:14.477 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2019-07-15 12:39:14.512 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-07-15 12:39:14.512 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-07-15 12:39:14.512 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-07-15 12:39:14.512 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-07-15 12:39:14.512 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-07-15 12:39:14.903 [restartedMain] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4cc9026
+2019-07-15 12:39:14.926 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2019-07-15 12:39:14.980 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.example.demo.entity' for aliases
+2019-07-15 12:39:15.018 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+2019-07-15 12:39:15.088 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:16) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a$$FastClassBySpringCGLIB$$3ddb7d9e.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a$$FastClassBySpringCGLIB$$3ddb7d9e.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:265) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a$$FastClassBySpringCGLIB$$3ddb7d9e.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.demo.entity.admin'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:265) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a$$FastClassBySpringCGLIB$$3ddb7d9e.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.example.demo.entity.admin
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:265) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a$$FastClassBySpringCGLIB$$3ddb7d9e.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1695167a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 more
+2019-07-15 12:39:21.203 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on zhewei with PID 2484 (started by Administrator in D:\IntelliJ IDEA 2018.3.5\demo2)
+2019-07-15 12:39:21.203 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-15 12:39:21.220 [restartedMain] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2019-07-15 12:39:22.173 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2019-07-15 12:39:22.174 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'com.example.demo'
+2019-07-15 12:39:22.194 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\adminMapper.class]
+2019-07-15 12:39:22.194 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\advantageMapper.class]
+2019-07-15 12:39:22.194 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\articleMapper.class]
+2019-07-15 12:39:22.194 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\contactMapper.class]
+2019-07-15 12:39:22.194 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\dirMapper.class]
+2019-07-15 12:39:22.195 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\logMapper.class]
+2019-07-15 12:39:22.195 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\pdShowMapper.class]
+2019-07-15 12:39:22.195 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\relationshipMapper.class]
+2019-07-15 12:39:22.195 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\slideMapper.class]
+2019-07-15 12:39:22.195 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\webInfoMapper.class]
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'adminMapper' and 'com.example.demo.dao.adminMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'adminMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'advantageMapper' and 'com.example.demo.dao.advantageMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'advantageMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'articleMapper' and 'com.example.demo.dao.articleMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'articleMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'contactMapper' and 'com.example.demo.dao.contactMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'contactMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dirMapper' and 'com.example.demo.dao.dirMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'dirMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'logMapper' and 'com.example.demo.dao.logMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'logMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'pdShowMapper' and 'com.example.demo.dao.pdShowMapper' mapperInterface
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'pdShowMapper'.
+2019-07-15 12:39:22.222 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'relationshipMapper' and 'com.example.demo.dao.relationshipMapper' mapperInterface
+2019-07-15 12:39:22.223 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+2019-07-15 12:39:22.223 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'slideMapper' and 'com.example.demo.dao.slideMapper' mapperInterface
+2019-07-15 12:39:22.223 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'slideMapper'.
+2019-07-15 12:39:22.223 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'webInfoMapper' and 'com.example.demo.dao.webInfoMapper' mapperInterface
+2019-07-15 12:39:22.223 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'webInfoMapper'.
+2019-07-15 12:39:23.092 [restartedMain] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5e599501
+2019-07-15 12:39:23.170 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.example.demo.entity' for aliases
+2019-07-15 12:39:23.207 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'
+2019-07-15 12:39:23.219 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\advantageMapper.xml]'
+2019-07-15 12:39:23.235 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\articleMapper.xml]'
+2019-07-15 12:39:23.289 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\contactMapper.xml]'
+2019-07-15 12:39:23.311 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\dirMapper.xml]'
+2019-07-15 12:39:23.324 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\logMapper.xml]'
+2019-07-15 12:39:23.343 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\pdShowMapper.xml]'
+2019-07-15 12:39:23.357 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\relationshipMapper.xml]'
+2019-07-15 12:39:23.375 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\slideMapper.xml]'
+2019-07-15 12:39:23.393 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\webInfoMapper.xml]'
+2019-07-15 12:39:23.580 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:23.580 [restartedMain] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2019-07-15 12:39:23.582 [restartedMain] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:23.582 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-07-15 12:39:23.582 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-07-15 12:39:23.582 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-07-15 12:39:23.583 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-07-15 12:39:23.583 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2019-07-15 12:39:23.583 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2019-07-15 12:39:23.583 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-07-15 12:39:23.583 [restartedMain] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2019-07-15 12:39:23.594 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-07-15 12:39:23.595 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-07-15 12:39:23.595 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-07-15 12:39:23.595 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-07-15 12:39:23.595 [restartedMain] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-07-15 12:39:23.823 [restartedMain] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2019-07-15 12:39:24.413 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.363 seconds (JVM running for 606.671)
+2019-07-15 12:39:26.012 [main] WARN  org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/G:/JavaEE/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/G:/JavaEE/maven_repository/org/json/json/20160212/json-20160212.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-07-15 12:39:26.071 [main] INFO  com.example.demo.DemoApplicationTests - Starting DemoApplicationTests on zhewei with PID 16184 (started by Administrator in D:\IntelliJ IDEA 2018.3.5\demo2)
+2019-07-15 12:39:26.071 [main] DEBUG com.example.demo.DemoApplicationTests - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-15 12:39:26.072 [main] INFO  com.example.demo.DemoApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-15 12:39:28.427 [main] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2019-07-15 12:39:28.449 [main] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - Using auto-configuration base package 'com.example.demo'
+2019-07-15 12:39:28.492 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\adminMapper.class]
+2019-07-15 12:39:28.493 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\advantageMapper.class]
+2019-07-15 12:39:28.493 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\articleMapper.class]
+2019-07-15 12:39:28.493 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\contactMapper.class]
+2019-07-15 12:39:28.494 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\dirMapper.class]
+2019-07-15 12:39:28.494 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\logMapper.class]
+2019-07-15 12:39:28.494 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\pdShowMapper.class]
+2019-07-15 12:39:28.494 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\relationshipMapper.class]
+2019-07-15 12:39:28.495 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\slideMapper.class]
+2019-07-15 12:39:28.495 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\com\example\demo\dao\webInfoMapper.class]
+2019-07-15 12:39:28.520 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'adminMapper' and 'com.example.demo.dao.adminMapper' mapperInterface
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'adminMapper'.
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'advantageMapper' and 'com.example.demo.dao.advantageMapper' mapperInterface
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'advantageMapper'.
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'articleMapper' and 'com.example.demo.dao.articleMapper' mapperInterface
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'articleMapper'.
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'contactMapper' and 'com.example.demo.dao.contactMapper' mapperInterface
+2019-07-15 12:39:28.521 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'contactMapper'.
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dirMapper' and 'com.example.demo.dao.dirMapper' mapperInterface
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'dirMapper'.
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'logMapper' and 'com.example.demo.dao.logMapper' mapperInterface
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'logMapper'.
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'pdShowMapper' and 'com.example.demo.dao.pdShowMapper' mapperInterface
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'pdShowMapper'.
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'relationshipMapper' and 'com.example.demo.dao.relationshipMapper' mapperInterface
+2019-07-15 12:39:28.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+2019-07-15 12:39:28.523 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'slideMapper' and 'com.example.demo.dao.slideMapper' mapperInterface
+2019-07-15 12:39:28.523 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'slideMapper'.
+2019-07-15 12:39:28.523 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'webInfoMapper' and 'com.example.demo.dao.webInfoMapper' mapperInterface
+2019-07-15 12:39:28.523 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'webInfoMapper'.
+2019-07-15 12:39:30.084 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@6bc7c054
+2019-07-15 12:39:30.442 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.example.demo.entity' for aliases
+2019-07-15 12:39:30.674 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\adminMapper.xml]'
+2019-07-15 12:39:30.777 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\advantageMapper.xml]'
+2019-07-15 12:39:30.847 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\articleMapper.xml]'
+2019-07-15 12:39:30.899 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\contactMapper.xml]'
+2019-07-15 12:39:30.953 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\dirMapper.xml]'
+2019-07-15 12:39:31.028 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\logMapper.xml]'
+2019-07-15 12:39:31.105 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\pdShowMapper.xml]'
+2019-07-15 12:39:31.150 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\relationshipMapper.xml]'
+2019-07-15 12:39:31.195 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\slideMapper.xml]'
+2019-07-15 12:39:31.243 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\IntelliJ IDEA 2018.3.5\demo2\target\classes\mapper\webInfoMapper.xml]'
+2019-07-15 12:39:32.380 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:32.381 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2019-07-15 12:39:32.422 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-07-15 12:39:32.424 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-07-15 12:39:32.425 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-07-15 12:39:32.427 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-07-15 12:39:32.432 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-07-15 12:39:32.432 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2019-07-15 12:39:32.433 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2019-07-15 12:39:32.433 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-07-15 12:39:32.433 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2019-07-15 12:39:32.446 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-07-15 12:39:32.447 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-07-15 12:39:32.447 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-07-15 12:39:32.447 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-07-15 12:39:32.447 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-07-15 12:39:34.365 [main] DEBUG org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration - No org.mybatis.spring.mapper.MapperFactoryBean found.
+2019-07-15 12:39:35.282 [main] INFO  com.example.demo.DemoApplicationTests - Started DemoApplicationTests in 10.286 seconds (JVM running for 13.282)

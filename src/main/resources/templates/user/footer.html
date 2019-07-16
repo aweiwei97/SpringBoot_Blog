@@ -10,12 +10,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3">
                     <h5>公司简介</h5>
-                    <p>我们是最好的婚纱团队<br>
-                        我们是最好的婚纱团队<br>
-                        我们是最好的婚纱团队<br>
-                        我们是最好的婚纱团队<br>
-                        我们是最好的婚纱团队
-                    </p>
+                    <div style="padding-right:150px"><p th:text="${webInfo.intro}"></p></div>
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <h5>站点导航</h5>
@@ -38,22 +33,21 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <h5>联系信息</h5>
-                    <ul class="contacts-list">
-                        <li>
-                            <p><i class="icon icon-House"></i>广州大学城716</p>
+                    <ul class="contacts-list footer-nav" style="color:#999999;font-size:12px">
+                        <li >
+                            <i class="icon icon-House"></i> <span th:text="${webInfo.adress}"></span>
+                        </li>
+                        <li >
+                            <i class="icon icon-Phone2"></i> <span th:text="${webInfo.phone}"></span>
                         </li>
                         <li>
-                            <p><i class="icon icon-Phone2"></i>0800 126 01268</p>
-                        </li>
-                        <li>
-                            <p><i class="icon icon-Mail"></i>139145@qq.com </p>
-
+                            <i class="icon icon-Mail"></i> <span th:text="${webInfo.email}"></span>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <h5>在线客服</h5>
-                   <img class="img-thumbnail" th:src="@{/img/online.jpg}"/>
+                   <img class="img-thumbnail" th:src="${webInfo.wechat}"/>
 
                 </div>
             </div>
@@ -61,8 +55,8 @@
     </section>
 
     <section class="copyright-section">
-        <p th:text="${session.webInfo.copyright}"></p>
-        <p th:text="${session.webInfo.fileinfo}"></p>
+        <p th:text="${webInfo.copyright}"></p>
+        <p th:text="${webInfo.fileinfo}"></p>
     </section>
 </footer>
 

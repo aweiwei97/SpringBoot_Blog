@@ -37,55 +37,91 @@
                         </h4>
                     </div>
                     <div class="col-md-12">
-                        <form id="articleForm" role="form" novalidate="novalidate">
-                            <input type="hidden" name="id" th:value="${webInfo!=null and webInfo.id!=null}?${webInfo.id}: ''" id="wid"/>
+                        <form id="articleForm" role="form" novalidate="novalidate" action="/admin/webInfo/update" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" th:value="${session.webInfo!=null and session.webInfo.id!=null}?${session.webInfo.id}: ''" id="wid"/>
+
+                            <div class="form-group col-md-12" >
+                                <div class="col-md-6">
+                                <label class="col-md-3 control-label">上传Logo：</label>
+                                <div class="col-md-3">
+                                    <input type="file" name="file" class="img-thumbnail" style="position:absolute;opacity:0;" id="LogoImg" accept="image/png,image/jpeg" onchange="showImg1()">
+                                    <img class="img-thumbnail" id="logo" th:src="${session.webInfo!=null and session.webInfo.logoUrl!=null}?${session.webInfo.logoUrl} : ''"/>
+                                </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                <label class="col-md-3 control-label">上传客服微信：</label>
+                                <div class="col-md-3">
+                                    <input type="file" name="file" class="img-thumbnail" style="position:absolute;opacity:0;" id="WeChatImg" accept="image/png,image/jpeg" onchange="showImg2()">
+                                    <img class="img-thumbnail" id="weChat" th:src="${session.webInfo!=null and session.webInfo.wechat!=null}?${session.webInfo.wechat} : ''"/>
+                                </div>
+                                </div>
+                            </div>
+
+
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
                               <div class="col-md-1"><h5>网站名称：</h5></div>
                                 <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站名称（必须）" name="webname" required="required"
-                                       aria-required="true" th:value="${webInfo!=null and webInfo.webname!=null }?${webInfo.webname}: ''"/>
+                                       aria-required="true" th:value="${session.webInfo!=null and session.webInfo.webname!=null }?${session.webInfo.webname}: ''"/>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
                                 <div class="col-md-1"><h5>网站域名：</h5></div>
                                 <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站域名（必须）" name="weburl" required="required"
-                                                             aria-required="true" th:value="${webInfo!=null and webInfo.weburl!=null }?${webInfo.weburl}: ''"/>
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.weburl!=null }?${session.webInfo.weburl}: ''"/>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
-                                <div class="col-md-1"><h5>网站关键字：</h5></div>
-                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站关键字（必须）" name="keyword" required="required"
-                                                             aria-required="true" th:value="${webInfo!=null and webInfo.keyword!=null }?${webInfo.keyword}: ''"/>
+                                <div class="col-md-1"><h5>公司地址：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入公司地址" name="adress" required="required"
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.adress!=null }?${session.webInfo.adress}: ''"/>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>联系方式：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入公司电话" name="phone" required="required"
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.phone!=null }?${session.webInfo.phone}: ''"/>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>公司邮箱：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入公司邮箱" name="email" required="required"
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.email!=null }?${session.webInfo.email}: ''"/>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
-                                <div class="col-md-1"><h5>网站描述：</h5></div>
-                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入网站描述" name="webdes" required="required"
-                                                             aria-required="true" th:value="${webInfo!=null and webInfo.webdes!=null }?${webInfo.webdes}: ''"/>
+                                <div class="col-md-1"><h5>公司简介：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入公司简介" name="intro" required="required"
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.intro!=null }?${session.webInfo.intro}: ''"/>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
                                 <div class="col-md-1"><h5>备案信息：</h5></div>
                                 <div class="col-md-8"><input type="text" class="form-control" placeholder="粤ICP备123XXX号" name="fileinfo" required="required"
-                                                             aria-required="true" th:value="${webInfo!=null and webInfo.fileinfo!=null }?${webInfo.fileinfo}: ''"/>
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.fileinfo!=null }?${session.webInfo.fileinfo}: ''"/>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
                                 <div class="col-md-1"><h5>版权信息：</h5></div>
                                 <div class="col-md-8"><input type="text" class="form-control" placeholder="2015 www.guhai.net  版权所有" name="copyright" required="required"
-                                                             aria-required="true" th:value="${webInfo!=null and webInfo.copyright!=null }?${webInfo.copyright}: ''"/>
+                                                             aria-required="true" th:value="${session.webInfo!=null and session.webInfo.copyright!=null }?${session.webInfo.copyright}: ''"/>
                                 </div>
                             </div>
 
 
 
                             <div class="text-center">
-                                <button type="button" class="btn btn-primary waves-effect waves-light" onclick="subWebInfo();">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">
                                     提交
                                 </button>
 
@@ -134,8 +170,6 @@
             tale.alertWarn('请输入版权信息');
             return;
         }
-
-
         var params = $("#articleForm").serialize();
         var url = '/admin/webInfo/update';
         tale.post({
@@ -156,6 +190,31 @@
                 }
             }
         });
+    }
+
+    //图片回显
+    function showImg1() {
+        var _name, _fileName, file;
+        var file=document.getElementById("LogoImg");
+        _name = file.value;
+        _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
+        if (_fileName !== "png" && _fileName !== "jpg") {
+            alert("上传图片格式不正确，请重新上传");
+        }else {
+            $("#logo").attr("src", window.URL.createObjectURL(file.files[0]));
+        }
+    }
+    //图片回显
+    function showImg2() {
+        var _name, _fileName, file;
+        var file=document.getElementById("WeChatImg");
+        _name = file.value;
+        _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
+        if (_fileName !== "png" && _fileName !== "jpg") {
+            alert("上传图片格式不正确，请重新上传");
+        }else {
+            $("#weChat").attr("src", window.URL.createObjectURL(file.files[0]));
+        }
     }
 </script>
 

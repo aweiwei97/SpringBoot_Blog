@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="Coderthemes" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="shortcut icon" th:href="@{/admin/images/logo.jpg}"/>
+    <link rel="shortcut icon" th:href="${session.webInfo.logoUrl}"/>
     <link th:href="@{//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css}" rel="stylesheet"/>
     <link th:href="@{/admin/css/style.min.css}" rel="stylesheet" type="text/css"/>
@@ -26,7 +26,7 @@
         <div class="text-center p-t-10" style="margin: 0 auto;">
             <div class="pull-left" style="padding-left: 10px;">
                 <a th:href="@{/admin/index}">
-                    <img th:src="@{/admin/images/logo.jpg}" width="50" height="50"/>
+                    <img th:src="${session.webInfo.logoUrl}" width="50" height="50"/>
                 </a>
             </div>
             <div class="pull-left" style="padding-left: 10px;">
@@ -46,8 +46,8 @@
 
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li class="dropdown">
-                        <a th:href="@{index.html}" class="dropdown-toggle profile" data-toggle="dropdown"
-                           aria-expanded="true"><img th:src="@{/admin/images/logo.jpg}" alt="user-img"
+                        <a th:href="@{admin/}" class="dropdown-toggle profile" data-toggle="dropdown"
+                           aria-expanded="true"><img th:src="${session.webInfo.logoUrl}" alt="user-img"
                                                      class="img-circle"/> </a>
                         <ul class="dropdown-menu">
                             <li><a th:href="@{/home}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i>
@@ -93,9 +93,10 @@
                        th:class="${active}=='contact'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-cloud-upload" aria-hidden="true"></i><span> 留言管理 </span></a>
                 </li>
-                <li th:class="${active}=='web'?'active':''">
-                    <a th:href="@{/admin/webInfo}" th:class="${active}=='web'?'waves-effect active':'waves-effect'"><i
-                            class="fa fa-link" aria-hidden="true"></i><span> 网站管理 </span></a>
+                <li th:class="${active}=='advantage'?'active':''">
+                    <a th:href="@{/admin/advantage}"
+                       th:class="${active}=='advantage'?'waves-effect active':'waves-effect'"><i
+                            class="fa fa-gear" aria-hidden="true"></i><span> 优势管理 </span></a>
                 </li>
                 <li th:class="${active}=='slide'?'active':''">
                     <a th:href="@{/admin/slide}"
@@ -105,12 +106,12 @@
                 <li th:class="${active}=='pdShow'?'active':''">
                     <a th:href="@{/admin/pdShow}"
                        th:class="${active}=='pdShow'?'waves-effect active':'waves-effect'"><i
-                            class="fa fa-comments" aria-hidden="true"></i><span> 作品展示管理 </span></a>
+                            class="fa fa-comments" aria-hidden="true"></i><span> 客户展示管理 </span></a>
                 </li>
-                <li th:class="${active}=='setting'?'active':''">
-                    <a th:href="@{#}"
-                       th:class="${active}=='setting'?'waves-effect active':'waves-effect'"><i
-                            class="fa fa-gear" aria-hidden="true"></i><span> 系统设置 </span></a>
+
+                <li th:class="${active}=='web'?'active':''">
+                    <a th:href="@{/admin/webInfo}" th:class="${active}=='web'?'waves-effect active':'waves-effect'"><i
+                            class="fa fa-link" aria-hidden="true"></i><span> 网站管理 </span></a>
                 </li>
             </ul>
             <div class="clearfix"></div>

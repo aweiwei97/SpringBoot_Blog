@@ -32,14 +32,16 @@ public class sllideController {
     @Resource
     private LogServiceImp logServiceImp;
 
-    public static final String CLASSPATH = commUtils.getUplodFilePath();
-
+    //本地使用路径
+   // public static final String CLASSPATH = commUtils.getUplodFilePath();
+    //CentOS使用路径
+    public static final String CLASSPATH = commUtils.getCentOSPath();
     /**
      * 轮播图
      * @param request
      * @return
      */
-    @RequestMapping("")
+    @RequestMapping(value = {"","/"})
     public String slide(HttpServletRequest request){
         slideExample example=new slideExample();
     example.setOrderByClause("slide_sort asc"); //升序
@@ -69,7 +71,7 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
         slideExample example = new slideExample();
         //当修改有上传图片时
         if(fname!=null) {
-            fkey= commUtils.getFileKey(fname, "轮播图"); //返回 /upload/YY/MM + "/" + UUID.UU32() + "." + 文件后缀
+            fkey= commUtils.getFileKey(fname, "Slide"); //返回 /upload/YY/MM + "/" + UUID.UU32() + "." + 文件后缀
             File f = new File(CLASSPATH + fkey);
             try {
                 FileCopyUtils.copy(file[0].getInputStream(), new FileOutputStream(f));
@@ -114,7 +116,7 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
             logServiceImp.insertLog(Types.ADD_SLIDE.getType(),null,request.getRemoteAddr(),1);
 
         }
-        return "redirect:";
+        return "redirect:/admin/slide";
     }
 
     @PostMapping("/delete")
@@ -141,6 +143,7 @@ public String uploadImg(HttpServletRequest request, @RequestParam MultipartFile[
             }
         }
         File file=new File(CLASSPATH +imgUrl);
+        file.delete();
         slideServiceImp.deleteByPrimaryKey(id);
         logServiceImp.insertLog(Types.DE_SLIDE.getType(),null,request.getRemoteAddr(),1);
 

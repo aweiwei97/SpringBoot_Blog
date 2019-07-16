@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/hunsha?serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/hunsha?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8
     password: 123456
 server:
   port: 8083
@@ -17,4 +17,6 @@ multipart:
   #location: roy-upload-tmp
   max-file-size: 100MB
   max-request-size: 100MB
+logging:
+  config:classpath:log4j2-spring.xml
 

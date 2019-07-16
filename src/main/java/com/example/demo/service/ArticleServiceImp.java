@@ -131,6 +131,9 @@ public class ArticleServiceImp {
      * @param cid
      */
     public void deleteByCid(int cid) {
+        if(cid==9){
+            throw  new TipException("不能删除公司简介页");
+        }
     article a=this.getContents(cid+"");
     if(a!=null){
         articleDao.deleteByPrimaryKey(cid);

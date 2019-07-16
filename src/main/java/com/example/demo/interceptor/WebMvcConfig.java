@@ -1,12 +1,12 @@
 package com.example.demo.interceptor;
 
 import com.example.demo.utils.commUtils;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ClassUtils;
 import org.springframework.web.servlet.config.annotation.*;
-import sun.net.www.content.image.png;
 
 import javax.annotation.Resource;
+import java.net.URISyntaxException;
 
 @Component
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
@@ -16,7 +16,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(baseInterceptor).addPathPatterns("/**").excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png ", "/**/*.jpg","/**/*.jpeg", "/**/*.gif", "/**/fonts/*", "/**/*.svg");
+    registry.addInterceptor(baseInterceptor).addPathPatterns("/**").excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png ","**/ueditor/*","/upload/image/*", "/**/*.jpg","/**/*.jpeg", "/**/*.gif", "/**/fonts/*", "/**/*.svg");
     }
 
     /**
@@ -25,8 +25,14 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/upload/**").addResourceLocations("file:"+ commUtils.getUplodFilePath()+"upload/");
+        //本地
+        //registry.addResourceHandler("/edit/**").addResourceLocations("file:"+ commUtils.getUplodFilePath()+"/admin/ueditor/jsp/");
+
+        //部署
+        String CentOSparh= commUtils.getCentOSPath();
+        registry.addResourceHandler("/edit/**").addResourceLocations("file:"+CentOSparh+ "/ueditor/jsp/");
+        registry.addResourceHandler("/upload/**").addResourceLocations("file:"+CentOSparh +"/upload/");
+
         super.addResourceHandlers(registry);
-       // registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
 }

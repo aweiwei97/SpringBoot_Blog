@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="/user/header::header"></div>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='联系我们',active='contact'">
+<div th:replace="/user/header::header(${title},${active})"></div>
 <body>
 
         <section class="top-header countact-us-header with-bottom-effect transparent-effect dark dark-strong">
@@ -58,49 +58,7 @@
                                     <div id="contactMap"></div>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-sm-6">
-                                <div class="contact-block">
-                                    <h5>keep in touch</h5>
-                                    <div class="row ">
-                                        <div class="col-md-12 clearfix">
-                                            <div class="type-info pull-left">
-                                                <i class="icon icon-House"></i>
-                                                address
-                                            </div>
-                                            <div class="info pull-right text-right">
-                                                <p class="no-margin">68 Landsriver Street, California 22066</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 clearfix">
-                                            <div class="type-info pull-left">
-                                                <i class="icon icon-Phone2"></i>
-                                                phone
-                                            </div>
-                                            <div class="info pull-right text-right">
-                                                <p class="no-margin">+201 126 216 88     +201 126 216 88</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 clearfix">
-                                            <div class="type-info pull-left">
-                                                <i class="icon icon-Mail"></i>
-                                                email
-                                            </div>
-                                            <div class="info pull-right text-right">
-                                                <p class="no-margin">support@oscend.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 clearfix">
-                                            <div class="type-info pull-left">
-                                                <i class="icon icon-Mouse"></i>
-                                                Skype Chat
-                                            </div>
-                                            <div class="info pull-right text-right">
-                                                <p class="no-margin">oscend.live</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
 
                     </div>

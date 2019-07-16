@@ -47,9 +47,13 @@ public class LogServiceImp {
      * 分页显示日志信息
      *
      */
-    public List<log> getLogs(){
+    public List<log> getLogs(int limit){
+        if(limit<0||limit>30){
+            limit=30;
+        }
     logExample example=new logExample();
         example.setOrderByClause("id desc");
+        PageHelper.startPage(1,limit);
     List<log> logList=logMapperDao.selectByExample(example);
     return logList;
 }

@@ -39,7 +39,6 @@ public class articleController {
         example.setOrderByClause("created desc");
         example.createCriteria().andTypeEqualTo("post");
         List<article> articles=articleServiceDao .selectByExampleWithBLOBs(example);
-
         request.setAttribute("articles", articles);
         return "admin/article_list";
     }
@@ -136,6 +135,9 @@ public RestResponseBo delete(@RequestParam int cid, HttpServletRequest request) 
         //logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid+"", request.getRemoteAddr(), this.getUid(request));
     } catch (Exception e) {
         String msg = "文章删除失败";
+        if(e instanceof  TipException){
+            msg=e.getMessage();
+        }
         return RestResponseBo.fail(msg);
     }
         logServiceImp.insertLog(Types.DEL_ARTICLE.getType(),null,request.getRemoteAddr(),1);

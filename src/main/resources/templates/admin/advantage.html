@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='网站管理',active='advantage'">
+<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<link th:href="@{/admin/plugins/tagsinput/jquery.tagsinput.css}" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/select2.dist.css/select2-bootstrap.css}" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/toggles/toggles.css}" rel="stylesheet"/>
+
+<link href="//cdn.bootcss.com/multi-select/0.9.12/css/multi-select.css" rel="stylesheet"/>
+<link href="//cdn.bootcss.com/select2/3.4.8/select2.min.css" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/md/css/style.css}" rel="stylesheet"/>
+<body class="fixed-left">
+<div id="wrapper">
+    <div th:replace="admin/header::header-body"></div>
+    <div class="content-page">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title">
+                            <th:block>
+                                优势信息设置
+                            </th:block>
+                        </h4>
+                    </div>
+                    <div class="col-md-12">
+                        <form role="form" class="form-horizontal"  id="advtange"  >
+                            <input type="hidden" name="id" th:value="${advantage!=null and advantage.id!=null}?${advantage.id}: ''" id="wid"/>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                              <div class="col-md-1"><h5>小标题：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入小标题）" name="title" required="required"
+                                       aria-required="true" th:value="${advantage!=null and advantage.title!=null }?${advantage.title}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>优势一：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入优势一" name="first" required="required"
+                                                             aria-required="true" th:value="${advantage!=null and advantage.first!=null }?${advantage.first}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>优势二：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入优势二" name="second" required="required"
+                                                             aria-required="true" th:value="${advantage!=null and advantage.second!=null }?${advantage.second}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>优势三：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入优势三" name="third" required="required"
+                                                             aria-required="true" th:value="${advantage!=null and advantage.third!=null }?${advantage.third}: ''"/>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group col-md-12" style="padding: 0 10px 0 0;">
+                                <div class="col-md-1"><h5>优势四：</h5></div>
+                                <div class="col-md-8"><input type="text" class="form-control" placeholder="请输入优势四" name="fourth" required="required"
+                                                             aria-required="true" th:value="${advantage!=null and advantage.fourth!=null }?${advantage.fourth}: ''"/>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                    提交
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div th:replace="admin/footer :: footer-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="admin/footer :: footer"></div>
+
+<script th:src="@{//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js}"></script>
+
+<script type="text/javascript">
+    var tale = new $.tale();
+    console.log("1221");
+    $('#advtange').validate({
+    submitHandler: function (form) {
+    var params = $("#advtange").serialize();
+    tale.post({
+    url : '/admin/advantage/update',
+    data: params,
+    success: function (result) {
+    if(result && result.success){
+    tale.alertOk('修改成功');
+    window.location.href("/admin/advantage")
+    } else {
+    tale.alertError(result.msg || '修改失败');
+    }
+    }
+    });
+    }
+    });
+</script>
+
+</body>
+</html>

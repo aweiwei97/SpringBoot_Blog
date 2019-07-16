@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="/user/header::header"></div>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='-最新动态',active='news'">
+<div th:replace="/user/header::header(${title},${active})"></div>
 <body>
 
 
@@ -11,7 +11,8 @@
                  <div class="post-list-item" >
                   <div class="post-list-item-container">
                     <a th:href="${commons.permalink(article)}" class="item-thumb  bg-deepgrey"
-                       th:style="'background-image:url('+@{/img/show6.jpg}+');background-size: 400px auto;'">-
+                       th:with="pic=${commons.random(11, '.jpg')}"
+                       th:style="'background-image:url(/img/news/'+@{${pic}}+');background-size: 400px auto;'">-
                     </a>
                     <div class="item-slant reverse-slant &lt; bg-deepgrey"></div>
                     <div class="item-slant"></div>

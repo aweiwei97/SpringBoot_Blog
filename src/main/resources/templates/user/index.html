@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="/user/header::header"></div>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='-首页',active='home'">
+<div th:replace="/user/header::header(${title},${active})"></div>
         <body>
         <section class="top-header home-header with-bottom-effect transparent-effect dark">
             <div class="bottom-effect"></div>
@@ -32,13 +32,13 @@
             <div class="container">
                 <div class="section-heading " >
                     <div class="section-title">我们的优势</div>
-                    <div class="section-subtitle">做最好的婚纱摄影</div>
+                    <div class="section-subtitle"><span th:text="${advantage.title}"></span></div>
                     <div class="design-arrow"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                    <div class="col-md-3 col-xm-3 wow fadeIn">
                         <article>
                             <div class="feature-item ">
                                 <div class="wrap-feature-icon">
@@ -48,13 +48,12 @@
                                 </div>
                                 <div class="title">优势一</div>
                                 <div class="text">
-                                    有钱人终成眷属<br>
-                                    没钱人亲眼目睹<br>
+                                   <span th:text="${advantage.first}"></span>
                                 </div>
                             </div>
                         </article>
                     </div> 
-                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                    <div class="col-md-3 col-xm-3 wow fadeIn">
                         <article>
                             <div class="feature-item">
                                 <div class="wrap-feature-icon">
@@ -62,15 +61,14 @@
                                         <span class="icon icon-Heart"></span>
                                     </div>
                                 </div>
-                                <div class="title">优势一</div>
+                                <div class="title">优势二</div>
                                 <div class="text">
-                                    有钱人终成眷属<br>
-                                    没钱人亲眼目睹<br>
+                                   <span th:text="${advantage.second}"> </span>
                                 </div>
                             </div>
                         </article>
                     </div> 
-                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                    <div class="col-md-3 col-xm-3 wow fadeIn">
                         <article>
                             <div class="feature-item">
                                 <div class="wrap-feature-icon">
@@ -78,15 +76,14 @@
                                         <span class="icon  icon-Tools"></span>
                                     </div>
                                 </div>
-                                <div class="title">优势一</div>
+                                <div class="title">优势三</div>
                                 <div class="text">
-                                   有钱人终成眷属<br>
-                                    没钱人亲眼目睹<br>
+                                <span th:text="${advantage.third}"></span>
                                 </div>
                             </div>
                         </article>
                     </div> 
-                    <div class="col-md-3 col-sm-6 wow fadeIn">
+                    <div class="col-md-3 col-xm-3 wow fadeIn">
                         <article>
                             <div class="feature-item">
                                 <div class="wrap-feature-icon">
@@ -94,10 +91,9 @@
                                         <span class="icon icon-Blog"></span>
                                     </div>
                                 </div>
-                                <div class="title">优势一</div>
+                                <div class="title">优势四</div>
                                 <div class="text">
-                                    有钱人终成眷属<br>
-                                    没钱人亲眼目睹<br>
+                                <span th:text="${advantage.fourth}"></span>
                                 </div>
                             </div>
                         </article>
@@ -114,8 +110,8 @@
         <section class="latest-works-section clearfix">
             <div class="container">
                 <div class="section-heading">
-                    <div class="section-title">最新作品</div>
-                    <div class="section-subtitle">我们只做最好的作品</div>
+                    <div class="section-title">服务客户</div>
+                    <div class="section-subtitle">部分服务中的客户</div>
                     <div class="design-arrow"></div>
                 </div>
             </div>
@@ -124,9 +120,7 @@
                 <div class="scroll-content" >
 
                     <div class="scroll-content-item  " th:each="list:${pdShowList}">
-                        <a th:href="@{${list.imgUrl}}" class="fancybox">
                             <img th:src="${list.imgUrl}" alt="" />
-                        </a>
                         <div class="name" ><th:block th:text="${list.imgTitle}"></th:block></div>
                     </div>
 

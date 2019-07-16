@@ -49,7 +49,7 @@
 
 
         <!--对应数据库表 mysql可以加入主键自增 字段命名 忽略某字段等 -->
-        <table tableName="log" domainObjectName="log"
+        <table tableName="advantage" domainObjectName="advantage"
                enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true"/>

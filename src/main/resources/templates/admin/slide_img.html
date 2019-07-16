@@ -182,21 +182,32 @@
     //关闭展现修改表单
     $(".close").click(function () {
         $("#slide_form").css('display',"none");
-
+        //图片回显
+        function showImg() {
+            var _name, _fileName, file;
+            var file=document.getElementById("exampleInputFile");
+            _name = file.value;
+            _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
+            if (_fileName !== "png" && _fileName !== "jpg") {
+                alert("上传图片格式不正确，请重新上传");
+            }else {
+                $("#img_change").attr("src", window.URL.createObjectURL(file.files[0]));
+            }
+        }
     });
-    //图片回显
-function showImg() {
-    var _name, _fileName, file;
-    var file=document.getElementById("exampleInputFile");
-    _name = file.value;
-    _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
-    if (_fileName !== "png" && _fileName !== "jpg") {
-        alert("上传图片格式不正确，请重新上传");
-    }else {
-        $("#img_change").attr("src", window.URL.createObjectURL(file.files[0]));
-    }
-}
 
+    //图片回显
+    function showImg() {
+        var _name, _fileName, file;
+        var file=document.getElementById("exampleInputFile");
+        _name = file.value;
+        _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
+        if (_fileName !== "png" && _fileName !== "jpg") {
+            alert("上传图片格式不正确，请重新上传");
+        }else {
+            $("#img_change").attr("src", window.URL.createObjectURL(file.files[0]));
+        }
+    }
 
 </script>
 </body>

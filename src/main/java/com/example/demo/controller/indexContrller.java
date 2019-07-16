@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.Ao.RestResponseBo;
 import com.example.demo.constant.WebConst;
-import com.example.demo.dto.ErrorCode;
 import com.example.demo.entity.*;
 import com.example.demo.exception.TipException;
 import com.example.demo.service.*;
@@ -39,6 +38,9 @@ public class indexContrller {
     private WebServiceImp webServiceImp;
 
     @Resource
+    private advantageServiceImp advantageService;
+
+    @Resource
     private Commoms commoms;
 
     @RequestMapping(value = {"/","/home"})
@@ -47,14 +49,18 @@ public class indexContrller {
         List<slide> slides=slideServiceDao.findAll(slideExample);
         pdShowExample pdShowExample=new pdShowExample();
         List<pdShow> pdShowList=pdShowServiceDao.selectByExample(pdShowExample);
-      webInfo web=webServiceImp.selectByPrimaryKey(1);
-      request.getSession().setAttribute("webInfo",web);
+        advantage adv=advantageService.getAdvantage();
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         request.setAttribute("slides",slides);
         request.setAttribute("pdShowList",pdShowList);
+        request.setAttribute("advantage",adv);
         return commoms.pre()+"index";
     }
     @GetMapping("/contact")
-    public String toPage(){
+    public String contact(HttpServletRequest request){
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         return  commoms.pre()+"contact";
     }
 
@@ -90,11 +96,15 @@ public class indexContrller {
 
     @RequestMapping("/news")
     public String news(HttpServletRequest request,@RequestParam(value = "limit", defaultValue = "8") int limit){
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         return this.newsList(request,1,"活动",limit);
     }
 
     @RequestMapping("/jobs")
     public String job(HttpServletRequest request,@RequestParam(value = "limit", defaultValue = "8") int limit){
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         return this.newsList(request,1,"招聘",limit);
     }
 
@@ -106,11 +116,13 @@ public class indexContrller {
      * @return
      */
     @RequestMapping("page/{p}/{type}")
-    public String newsList(HttpServletRequest request,@PathVariable(value = "p") int p,@PathVariable(value = "type") String type,@RequestParam(value = "limit", defaultValue = "6") int limit){
+    public String newsList(HttpServletRequest request,@PathVariable(value = "p") int p,@PathVariable(value = "type") String type,@RequestParam(value = "limit", defaultValue = "8") int limit){
         p=p<0||p> WebConst.MAX_PAGE ? 1 : p;
         articleExample example=new articleExample( );
         PageInfo<article> list=articleServiceDao.selectByExampleWithBLOBs(p,type,limit);
         request.setAttribute("articles",list);
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         if(type.equals("活动")) {
             return commoms.pre() + "news";
         }else{
@@ -131,7 +143,28 @@ public class indexContrller {
         if (null == a|| "draft".equals(a.getStatus())) {
             return "comm_404";   //正在起草中的
         }
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
         request.setAttribute("article", a);
+        request.setAttribute("is_post", true);
+        return  commoms.pre()+"post";
+    }
+    /**
+     * 文章页(预览)
+     *
+     * @param request 请求
+     * @param cid     文章主键
+     * @return
+     */
+    @GetMapping(value = {"article/{cid}/preview", "article/{cid}.html"})
+    public String articlePreview(HttpServletRequest request, @PathVariable String cid) {
+        article contents = articleServiceDao.getContents(cid);
+        if (null == contents) {
+            return "comm_404";
+        }
+        webInfo web=webServiceImp.selectByPrimaryKey(1);
+        request.setAttribute("webInfo",web);
+        request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
         return  commoms.pre()+"post";
     }

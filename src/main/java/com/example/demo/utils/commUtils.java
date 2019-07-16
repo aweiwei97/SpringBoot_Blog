@@ -2,12 +2,14 @@ package com.example.demo.utils;
 
 import com.example.demo.controller.admin.sllideController;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.ClassUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 import java.util.Date;
 
 public class commUtils {
@@ -30,6 +32,20 @@ public class commUtils {
     }
 
     /**
+     * 获取在CENTOS上的项目static路径
+     * @return
+     */
+    public static String getCentOSPath(){
+        String path=null;
+        try {
+             path=ClassUtils.getDefaultClassLoader().getResource("").toURI().getPath();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return path+"static";
+    }
+
+    /**
      * 获取保存文件的位置,jar所在目录的路径
      *
      * @return
@@ -45,7 +61,7 @@ public class commUtils {
         int lastIndex = path.lastIndexOf("/") + 1;
         path = path.substring(0, lastIndex);
         File file = new File("");
-        return file.getAbsolutePath() + "/";
+        return file.getAbsolutePath()+"/src/main/resources/static";
     }
 
     public static String getFileKey(String name,String dir) {

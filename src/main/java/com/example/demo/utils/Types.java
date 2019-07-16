@@ -7,7 +7,7 @@ package com.example.demo.utils;
  */
 public enum Types {
     LOGIN("登录后台"), UP_PWD("修改密码"), UP_INFO("修改个人信息"), ADD_SLIDE("增加轮播图"),UP_SLIDE("修改轮播信息"),DE_SLIDE("删除轮播图"),
-    DEL_ARTICLE("删除文章"),ADD_ARTICLE("增加文章"),UP_ARTICLE("修改文章"),UP_WEBINFO("修改网站信息");
+    DEL_ARTICLE("删除文章"),ADD_ARTICLE("增加文章"),UP_ARTICLE("修改文章"),UP_WEBINFO("修改网站信息"),LOGOUT("退出登陆");
 
     private String type;
 
